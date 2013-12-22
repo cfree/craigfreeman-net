@@ -1,0 +1,6 @@
+[submodule "wp-content/themes/cfree-fave"]
+	path = wp-content/themes/cfree-fave
+	url = git@bitbucket.org:cfree/cfree-fave.git
+[submodule "wp-content/themes/favepersonal"]
+	path = wp-content/themes/favepersonal
+	url = git@git.crowdfave.org:wp-theme/favepersonal.git
