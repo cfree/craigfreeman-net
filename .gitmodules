@@ -3,4 +3,4 @@
 	url = git@bitbucket.org:cfree/cfree-fave.git
 [submodule "wp-content/themes/favepersonal"]
 	path = wp-content/themes/favepersonal
-	url = git@git.crowdfave.org:wp-theme/favepersonal.git
+	url = https://github.com/crowdfavorite/wp-favepersonal.git
