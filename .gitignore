@@ -1,2 +1,7 @@
 wp/
 .svn/
+archives/
+sitemap.xml
+work/
+.getinfo.php
+local-config.php
