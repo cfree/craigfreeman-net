@@ -5,3 +5,5 @@ sitemap.xml
 work/
 .getinfo.php
 local-config.php
+.sass-cache/
+node_modules/
