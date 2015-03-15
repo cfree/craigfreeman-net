@@ -28,13 +28,13 @@ define('WP_CONTENT_DIR', dirname(__FILE__).'/wp-content');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'oneninfi_wp');
+define('DB_NAME', 'labscom_cfree_v3');
 
 /** MySQL database username */
-define('DB_USER', 'oneninfi_cf');
+define('DB_USER', 'labscom_cfree');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'ch4dw1ck!');
+define('DB_PASSWORD', '26)JMUzb)Nx&G');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

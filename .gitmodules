@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+[submodule "wp-content/plugins/wp-karten"]
+	path = wp-content/plugins/wp-karten
+	url = git@github.com:cfree/wp-karten.git
+=======
+>>>>>>> Removed old themes
