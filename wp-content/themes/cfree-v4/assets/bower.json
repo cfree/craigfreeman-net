@@ -1,0 +1,13 @@
+{
+	"name": "craigfreeman.net",
+	"version": "4.0.0",
+	"main": "css/style.min.css",
+	"ignore": [
+		".jshintrc",
+		"**/*.txt"
+	],
+	"devDependencies": {
+		"modernizr": "2.8.3"
+	},
+	"private": true
+}
