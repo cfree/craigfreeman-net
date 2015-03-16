@@ -1,6 +1,6 @@
 (function($) {
 
-	var CFreeMain = {
+	var CFree = {
 		init: function() {
 			// Do things
 		}

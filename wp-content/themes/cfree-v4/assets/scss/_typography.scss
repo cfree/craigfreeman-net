@@ -7,10 +7,10 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
+	color: $gray-dark;
+	font-size: 20px;
+	font-size: 2rem;
+	line-height: 1.2;
 }
 
 h1,
@@ -23,6 +23,7 @@ h6 {
 }
 
 p {
+	line-height: 2;
 	margin-bottom: 1.5em;
 }
 

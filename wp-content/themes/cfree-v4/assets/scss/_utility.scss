@@ -70,26 +70,6 @@
 
 
 
-// ---------
-// Clearings
-// ---------
-
-.clear {
-	&:before,
-	&:after {
-		content: '';
-		display: table;
-	}
-
-	&:after {
-		clear: both;
-	}
-}
-
-
-
-
-
 // -------
 // Widgets
 // -------

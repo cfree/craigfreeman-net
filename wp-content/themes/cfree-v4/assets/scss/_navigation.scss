@@ -2,52 +2,54 @@
 // Navigation
 //------------------------------------------------
 
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-
-	ul {
+.site-navigation {
+	@include span(9 of 12 last);
+	height: 100%;
+	
+	.menu {
+		@include clearfix;
+		bottom: 0;
 		list-style: none;
 		margin: 0;
-		padding-left: 0;
+		padding: 0;
+		position: absolute;
+		right: 0;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			left: -999em;
-			position: absolute;
-			top: 1.5em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li:hover > ul {
-				left: 100%;
-			}
-
-			a {
-				width: 200px;
-			}
+		li {
+			display: inline-block;
+			margin-left: $space;
 		}
 
-		li:hover > ul {
-			left: auto;
+		a {
+			color: $white;
+			display: block;
+			font-family: $font-headings;
+			letter-spacing: 1px;
+			padding: ($space * 0.75) 0;
+			position: relative;
+			text-transform: uppercase;
+
+			&:before {
+				background: $secondary;
+				bottom: 0;
+				content: '';
+				left: 50%;
+				height: 6px;
+				max-width: 0;
+				position: absolute;
+				transition: all 0.2s;
+				width: 100%;
+			}
+
+			&:hover {
+				text-decoration: none;
+
+				&:before {
+					left: 0;
+					max-width: 100%;
+				}
+			}
 		}
-	}
-
-	li {
-		float: left;
-		position: relative;
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
 	}
 }
 
@@ -56,24 +58,30 @@
 	display: none;
 }
 
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
+.site-main {
+	.comment-navigation,
+	.posts-navigation,
+	.post-navigation {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
 }
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
 }
 
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
 }

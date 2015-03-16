@@ -3,19 +3,19 @@
  */
 var gulp = require('gulp'),
 	gutil = require('gulp-util'),
-	compass = require("gulp-compass"),
+	compass = require('gulp-compass'),
 	filesCached = require('gulp-cache'),
 	filesChanged = require('gulp-changed'),
 	jsHint = require('gulp-jshint'),
-	refresh = require('gulp-livereload'),
+	livereload = require('gulp-livereload'),
 	compressImgs = require('gulp-imagemin'),
-	notify = require("gulp-notify"),
-	watching = false,
+	notify = require('gulp-notify'),
 	map = require('map-stream'),
 	bower = require('gulp-bower'),
+	watching = false,
 	files = {
 		all: {
-			sass: 'scss/**/*.scss',
+			scss: 'scss/**/*.scss',
 			css: 'css/*.css',
 			js: {
 				custom: 'js/**/*.js',
@@ -24,17 +24,18 @@ var gulp = require('gulp'),
 			img: 'img/**/*'
 		},
 		prod: {
-			sass: 'scss/styles.min.css',
+			css: 'css/styles.min.css',
 			js: 'js/scripts.min.css'
 		}
 	},
 	paths = {
-		sass: 'scss/',
+		scss: 'scss/',
 		css: 'css/',
 		js: 'js/',
 		img: 'img/',
 		bower: './vendor/'
 	};
+
 
 /**
  * Development tasks
@@ -42,11 +43,11 @@ var gulp = require('gulp'),
 
 // Compile Sass via Compass and refresh styles in browser
 gulp.task('compileSass', function() {
-	return gulp.src(files.all.sass)
+	return gulp.src(files.all.scss)
 		.pipe(
 			compass({
 				css: paths.css,
-				sass: paths.sass,
+				sass: paths.scss,
 				image: paths.img,
 				comments: false,
 				require: ['susy', 'normalize-scss']
@@ -56,7 +57,7 @@ gulp.task('compileSass', function() {
 			}))
 		)
 		.pipe(gulp.dest(paths.css))
-		.pipe(refresh())
+		.pipe(livereload())
 		.pipe(notify('Compass successfully compiled'));
 });
 
@@ -82,6 +83,7 @@ gulp.task('runBower', function() {
 gulp.task('setWatchStatus', function() {
 	watching = true;
 });
+
 
 /**
  * Build tasks
@@ -114,12 +116,14 @@ gulp.task('compressImgs', function() {
 		.pipe(gulp.dest(paths.img));
 });
 
+
 /**
  * Run tasks
  */
 gulp.task('watch', ['setWatchStatus'], function() {
-	gulp.watch(files.all.sass, ['compileSass']);
+	gulp.watch(files.all.scss, ['compileSass']);
 	gulp.watch(files.all.js.custom, ['lintScripts']);
+	livereload.listen();
 });
 
 gulp.task('build', ['compressImgs', 'readyStyles', 'readyScripts']);

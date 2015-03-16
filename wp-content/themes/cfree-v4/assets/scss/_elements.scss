@@ -3,31 +3,38 @@
 //------------------------------------------------
 
 html {
-	box-sizing: border-box;
+	@include box-sizing(border-box);
+	font-family: $font-serif;
+	// Root for rems
+		// 62.5% takes 16px (browser default size for medium text) down to 10px
+		// ref: http://clagnut.com/blog/348/
+	font-size: 62.5%;
+	line-height: 20px;
 }
 
 *,
 *:before,
 *:after { // Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 	box-sizing: inherit;
+	word-wrap: break-word;
 }
 
 body {
-	background: #fff; // Fallback for when there is no custom background color defined.
+	background: $white; // Fallback for when there is no custom background color defined.
 }
 
 a {
-	color: royalblue;
-}
+	text-decoration: none;
 
-a:visited {
-	color: purple;
+	&,
+	&:visited {
+		color: $secondary;
+	}
 }
 
 a:hover,
-a:focus,
 a:active {
-	color: midnightblue;
+	text-decoration: underline;
 }
 
 a:focus {
@@ -52,7 +59,7 @@ q {
 }
 
 hr {
-	background-color: #ccc;
+	background-color: $gray-light;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;

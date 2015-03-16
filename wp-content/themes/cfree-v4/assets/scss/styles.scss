@@ -4,8 +4,14 @@
 // >>> TABLE OF CONTENTS:
 //------------------------------------------------
 
-// Susy is included via Compass
-// Normalize.css is included via Compass
+// Compass
+@import "compass";
+
+// Susy
+@import "susy";
+
+// Normalize.css
+@import "normalize";
 
 // Variables
 @import "variables";
@@ -28,6 +34,12 @@
 // Icons
 @import "icons";
 
+// Layout
+@import "layout/_header";
+@import "layout/_content";
+// @import "layout/sidebar";
+// @import "layout/footer";
+
 // Navigation
 @import "navigation";
 
@@ -35,10 +47,7 @@
 @import "forms";
 
 // Content
-@import "content";
 
-// Templates
-// ...
 
 // Utility
 @import "utility";
