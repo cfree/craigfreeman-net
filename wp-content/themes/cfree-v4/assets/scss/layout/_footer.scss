@@ -5,9 +5,11 @@
 .site-footer {
 	background: $gray-light;
 	color: darken($gray-light, 25%);
+	font-family: $font-headings;
 	font-size: 14px;
 	padding: ($space) 0;
 	text-align: center;
+	text-transform: uppercase;
 
 	a {
 		color: lighten($gray-dark, 30%);

@@ -96,6 +96,48 @@
 						You could of course use the <i>i element</i> which represents a range of text that is set off from the normal text for some reason, for example, technical terms, foreign language phrases, or fictional character thoughts. 
 						<i>It is typically displayed in italic type</i>. The next piece of text is marked up using the code element <code>function()</code> and finally links will be styled <a href="https://developer.mozilla.org/en-US/docs/HTML/Element/a">like this</a>.
 					</p>
+
+					<p><a href="" class="button button--primary">Button Primary Centered</a></p>
+
+					<p><a href="" class="button button--primary__ghost">Button Primary Ghost Centered</a></p>
+
+					<p><a href="" class="button button--secondary">Button Secondary</a></p>
+
+					<p><a href="" class="button button--secondary__ghost">Button Secondary Ghost</a></p>
+
+					<p>
+						<a href="" class="button button--primary">Button Primary</a>
+						<a href="" class="button button--primary">Button Primary Adjacent</a>
+					</p>
+
+					<form action="">
+						<label for=""></label>
+						<input type="text">
+
+						<label for=""></label>
+						<input type="text">
+
+						<label for=""></label>
+						<input type="text">
+
+						<label for=""></label>
+						<input type="text">
+
+						<label for=""></label>
+						<input type="text">
+
+						<label for=""></label>
+						<input type="text">
+
+						<label for=""></label>
+						<textarea name="" id="" cols="30" rows="10">
+							
+						</textarea>
+
+						<button>Send</button>
+						<button type="reset">Clear</button>
+
+					</form>
 							 
 					<ol>
 						<li>List item one</li>

@@ -39,6 +39,10 @@
 	.is-fixed & {
 		margin: 10px 0;
 	}
+
+	a:focus {
+		outline: none;
+	}
 }
 
 .site-title__logo {

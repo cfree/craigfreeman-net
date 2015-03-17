@@ -9,6 +9,7 @@ html {
 		// 62.5% takes 16px (browser default size for medium text) down to 10px
 		// ref: http://clagnut.com/blog/348/
 	font-size: 62.5%;
+	-webkit-font-smoothing: antialiased;
 	line-height: 1;
 }
 
@@ -24,7 +25,7 @@ body {
 }
 
 a {
-	color: $secondary;
+	color: $primary;
 	text-decoration: none;
 }
 

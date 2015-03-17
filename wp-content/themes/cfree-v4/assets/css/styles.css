@@ -572,6 +572,7 @@ html {
   box-sizing: border-box;
   font-family: "ff-tisa-web-pro", Georgia, "Times New Roman", serif;
   font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
   line-height: 1;
 }
 
@@ -587,7 +588,7 @@ body {
 }
 
 a {
-  color: #E64A45;
+  color: #4D9ABE;
   text-decoration: none;
 }
 
@@ -929,6 +930,9 @@ big {
 .is-fixed .site-title {
   margin: 10px 0;
 }
+.site-title a:focus {
+  outline: none;
+}
 
 .site-title__logo {
   height: auto;
@@ -953,9 +957,6 @@ big {
 
 .site-main p {
   line-height: 2;
-}
-.site-main a {
-  color: #4D9ABE;
 }
 
 .sticky {
@@ -1067,9 +1068,11 @@ big {
 .site-footer {
   background: #F1F1F1;
   color: #b1b1b1;
+  font-family: "effra", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   padding: 20px 0;
   text-align: center;
+  text-transform: uppercase;
 }
 .site-footer a {
   color: #849aa5;
@@ -1109,6 +1112,8 @@ big {
   color: #FFF;
   display: block;
   font-family: "effra", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-size: 2rem;
   letter-spacing: 1px;
   padding: 20px 0;
   position: relative;
@@ -1427,4 +1432,77 @@ textarea {
   .breakpoint-context {
     z-index: 3;
   }
+}
+
+.button, button {
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-family: "effra", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  padding: 12px 16px;
+  text-transform: uppercase;
+}
+.button + .button, button + .button, .button + button, button + button {
+  margin-left: 20px;
+}
+.button:hover, button:hover {
+  text-decoration: none;
+}
+
+.button--primary {
+  background: #4D9ABE;
+  border: 4px solid #4D9ABE;
+  color: #FFF;
+}
+.button--primary:hover {
+  background: #FFF;
+  border: 4px solid #4D9ABE;
+  color: #4D9ABE;
+}
+
+.button--primary__ghost {
+  background: #FFF;
+  border: 4px solid #4D9ABE;
+  color: #4D9ABE;
+}
+.button--primary__ghost:hover {
+  background: #4D9ABE;
+  border: 4px solid #4D9ABE;
+  color: #FFF;
+}
+
+.button--secondary, button {
+  background: #E64A45;
+  border: 4px solid #E64A45;
+  color: #FFF;
+}
+.button--secondary:hover, button:hover {
+  background: #FFF;
+  border: 4px solid #E64A45;
+  color: #E64A45;
+}
+
+.button--secondary__ghost {
+  background: #FFF;
+  border: 4px solid #E64A45;
+  color: #E64A45;
+}
+.button--secondary__ghost:hover {
+  border: 4px solid #E64A45;
+  background: #E64A45;
+  color: #FFF;
+}
+
+button {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
 }
