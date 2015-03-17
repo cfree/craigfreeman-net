@@ -572,7 +572,7 @@ html {
   box-sizing: border-box;
   font-family: "ff-tisa-web-pro", Georgia, "Times New Roman", serif;
   font-size: 62.5%;
-  line-height: 20px;
+  line-height: 1;
 }
 
 *,
@@ -687,9 +687,8 @@ h6 {
   clear: both;
 }
 
-p {
-  line-height: 2;
-  margin-bottom: 1.5em;
+p + p {
+  margin-top: 1.5em;
 }
 
 dfn,
@@ -947,6 +946,9 @@ big {
 .content-area {
   background: #FFF;
 }
+.content-area p {
+  line-height: 2;
+}
 
 .sticky {
   display: block;
@@ -1052,6 +1054,17 @@ big {
 
 .gallery-caption {
   display: block;
+}
+
+.site-footer {
+  background: #F1F1F1;
+  color: #b1b1b1;
+  font-size: 14px;
+  padding: 20px 0;
+  text-align: center;
+}
+.site-footer a {
+  color: #849aa5;
 }
 
 .site-navigation {
@@ -1203,6 +1216,8 @@ big {
 
 .site-social--meetup:before {
   content: 'k';
+  font-size: 35px;
+  line-height: 32px;
 }
 .site-social--meetup:hover:before {
   color: #E51937;

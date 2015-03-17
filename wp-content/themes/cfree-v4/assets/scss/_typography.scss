@@ -23,8 +23,9 @@ h6 {
 }
 
 p {
-	line-height: 2;
-	margin-bottom: 1.5em;
+	& + p {
+		margin-top: 1.5em;
+	}
 }
 
 dfn,

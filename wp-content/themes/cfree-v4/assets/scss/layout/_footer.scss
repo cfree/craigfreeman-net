@@ -1,0 +1,15 @@
+//------------------------------------------------
+// Footer
+//------------------------------------------------
+
+.site-footer {
+	background: $gray-light;
+	color: darken($gray-light, 25%);
+	font-size: 14px;
+	padding: ($space) 0;
+	text-align: center;
+
+	a {
+		color: lighten($gray-dark, 30%);
+	}
+}
