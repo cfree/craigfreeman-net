@@ -37,11 +37,11 @@
 		<div class="container">
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'cfree' ); ?></a>		
 			<div class="site-branding">
-				<h1 class="site-title">
+				<h2 class="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<img class="site-title__logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
 					</a>
-				</h1>
+				</h2>
 			</div><!-- .site-branding -->
 
 			<ul class="site-header__social">
@@ -64,8 +64,10 @@
 
 	<div id="content" class="site-content">
 		<div id="primary" class="content-area">
-			<section class="masthead masthead--home">
-				
+			<section class="masthead masthead--typewriter">
+				<div class="container">
+					<h1 class="masthead__title masthead__title__two-lines"><?php _e( 'Front-End Engineering', 'cfree' ); ?></h1>
+				</div>
 			</section>
 
 			<main id="main" class="site-main" role="main">

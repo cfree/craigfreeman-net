@@ -1,0 +1,47 @@
+//------------------------------------------------
+// Mastheads
+//------------------------------------------------
+
+.masthead {
+	@include background-size(cover);
+	height: 600px;
+	position: relative;
+
+	&:before {
+		background: $primary;
+		content: '';
+		height: 100%;
+		opacity: 0.5;
+		position: absolute;
+		width: 100%;
+	}
+
+	.container {
+		@include clearfix;
+		height: 100%;
+		position: relative;
+	}
+}
+
+.masthead__title {
+	color: $white;
+	font-family: $font-headings;
+	font-size: 80px;
+	font-size: 8rem;
+	line-height: 1;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	text-shadow: 3px 3px $gray-dark;
+	text-transform: uppercase;
+	top: 44%;
+	width: 70%;
+}
+
+.masthead__title__two-lines {
+	top: 40%;
+}
+
+.masthead--typewriter {
+	background: url('../img/heroes/typewriter.jpg') center no-repeat;
+}

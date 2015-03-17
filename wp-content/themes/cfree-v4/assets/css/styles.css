@@ -566,10 +566,6 @@ th {
   }
 }
 
-.site-content {
-  padding-top: 110px;
-}
-
 html {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -887,6 +883,9 @@ big {
 }
 
 .site-header {
+  -moz-border-radius: 0 2px 2px #3D4C53;
+  -webkit-border-radius: 0;
+  border-radius: 0 2px 2px #3D4C53;
   background: #3D4C53;
   left: 0;
   max-height: 110px;
@@ -894,6 +893,7 @@ big {
   right: 0;
   top: 0;
   transition: max-height 0.3s;
+  z-index: 100;
 }
 .site-header.is-fixed {
   max-height: 70px;
@@ -937,6 +937,15 @@ big {
 .is-fixed .site-title__logo {
   margin: 0;
   max-height: 50px;
+}
+
+.site-content {
+  background: #3D4C53;
+  padding-top: 110px;
+}
+
+.content-area {
+  background: #FFF;
 }
 
 .sticky {
@@ -1268,6 +1277,57 @@ input[type="search"] {
 textarea {
   padding-left: 3px;
   width: 100%;
+}
+
+.masthead {
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+}
+.masthead:before {
+  background: #4D9ABE;
+  content: '';
+  height: 100%;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+}
+.masthead .container {
+  height: 100%;
+  position: relative;
+}
+.masthead .container:before, .masthead .container:after {
+  content: '';
+  display: table;
+}
+.masthead .container:after {
+  clear: both;
+}
+
+.masthead__title {
+  color: #FFF;
+  font-family: "effra", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 80px;
+  font-size: 8rem;
+  line-height: 1;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  text-shadow: 3px 3px #3D4C53;
+  text-transform: uppercase;
+  top: 44%;
+  width: 70%;
+}
+
+.masthead__title__two-lines {
+  top: 40%;
+}
+
+.masthead--typewriter {
+  background: url("../img/heroes/typewriter.jpg") center no-repeat;
 }
 
 .screen-reader-text {

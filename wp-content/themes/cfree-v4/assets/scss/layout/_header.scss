@@ -3,6 +3,7 @@
 //------------------------------------------------
 
 .site-header {
+	@include border-radius(0 2px 2px $gray-dark);
 	background: $gray-dark;
 	left: 0;
 	max-height: 110px;
@@ -10,6 +11,7 @@
 	right: 0;
 	top: 0;
 	transition: max-height 0.3s;
+	z-index: 100;
 
 	&.is-fixed {
 		max-height: 70px;
