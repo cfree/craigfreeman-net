@@ -5,14 +5,18 @@
 .site-header {
 	background: $gray-dark;
 	left: 0;
-	min-height: 80px;
+	max-height: 110px;
 	position: fixed;
 	right: 0;
-	top: 32px;
-	transition: min-height 0.2s;
+	top: 0;
+	transition: max-height 0.3s;
 
-	&.has-scrolled {
-		min-height: 50px;
+	&.is-fixed {
+		max-height: 70px;
+	}
+
+	.admin-bar & {
+		top: 32px;
 	}
 
 	.container {
@@ -28,17 +32,22 @@
 	@include clearfix;
 	font-size: 18px;
 	font-size: 1.8rem;
-	margin: 0;
+	margin: 15px 0;
+
+	.is-fixed & {
+		margin: 10px 0;
+	}
 }
 
 .site-title__logo {
-	float: left;
 	height: auto;
-	margin: 15px 0;
+	max-height: 80px;
 	max-width: 100%;
+	transition: max-height 0.3s;
+	vertical-align: middle;
 
-	.has-scrolled & {
-		@include transform(scale(0.6, 0.6));
-		margin: 10px 0;
+	.is-fixed & {
+		margin: 0;
+		max-height: 50px;
 	}
 }

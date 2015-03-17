@@ -2,9 +2,8 @@
 // Icons
 //------------------------------------------------
 
-[data-icon]:before {
-	font-family: "cf-net" !important;
-	content: attr(data-icon);
+@mixin icon {
+	font-family: $font-icons !important;
 	font-style: normal !important;
 	font-weight: normal !important;
 	font-variant: normal !important;
@@ -15,17 +14,14 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+[data-icon]:before {
+	@include icon;
+	content: attr(data-icon);
+}
+
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-	font-family: "cf-net" !important;
-	font-style: normal !important;
-	font-weight: normal !important;
-	font-variant: normal !important;
-	text-transform: none !important;
-	speak: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	@include icon;
 }
 
 .icon-hamburger:before {
@@ -46,9 +42,6 @@
 .icon-linkedin:before {
 	content: "l";
 }
-.icon-meetup:before {
-	content: "p";
-}
 .icon-email:before {
 	content: "e";
 }
@@ -58,20 +51,11 @@
 .icon-design:before {
 	content: "d";
 }
-.icon-portfolio:before {
+.icon-categories:before {
 	content: "b";
 }
 .icon-tools:before {
 	content: "o";
-}
-.icon-news:before {
-	content: "n";
-}
-.icon-me:before {
-	content: "i";
-}
-.icon-resume:before {
-	content: "r";
 }
 .icon-github:before {
 	content: "g";
@@ -103,9 +87,24 @@
 .icon-search:before {
 	content: "f";
 }
-.icon-home:before {
-	content: "k";
-}
 .icon-data:before {
 	content: "q";
+}
+.icon-portfolio:before {
+	content: "u";
+}
+.icon-tags:before {
+	content: "w";
+}
+.icon-calendar:before {
+	content: "y";
+}
+.icon-comments:before {
+	content: "z";
+}
+.icon-download:before {
+	content: "i";
+}
+.icon-meetup:before {
+	content: "k";
 }

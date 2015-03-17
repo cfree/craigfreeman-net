@@ -13,7 +13,11 @@
 		margin: 0;
 		padding: 0;
 		position: absolute;
-		right: 0;
+		right: 10px;
+
+		@include breakpoint($break-medium) {
+			right: 15px;			
+		}
 
 		li {
 			display: inline-block;
@@ -25,7 +29,7 @@
 			display: block;
 			font-family: $font-headings;
 			letter-spacing: 1px;
-			padding: ($space * 0.75) 0;
+			padding: $space 0;
 			position: relative;
 			text-transform: uppercase;
 
@@ -34,7 +38,7 @@
 				bottom: 0;
 				content: '';
 				left: 50%;
-				height: 6px;
+				height: 8px;
 				max-width: 0;
 				position: absolute;
 				transition: all 0.2s;
@@ -83,5 +87,79 @@
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+}
+
+// Social
+.site-header__social {
+	float: right;
+	list-style: none;
+	margin: $space 0 0;
+	padding: 0;
+
+	.is-fixed & {
+		display: none;
+	}
+
+	li {
+		float: left;
+		margin: 0 0 0 $space;
+		padding: 0;
+	}
+}
+
+.site-social {
+	display: block;
+	height: 30px;
+	overflow: hidden;
+	text-indent: -9999em;
+	width: 30px;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:before {
+		@include transition(color 0.2s);
+		@include icon;
+		color: $gray-light;
+		display: block;
+		font-size: 30px;
+		line-height: 30px;
+		text-align: center;
+		text-indent: 0;
+	}
+}
+
+.site-social--twitter {
+	&:before {
+		content: 't';
+	}
+
+	&:hover:before {
+		color: #00ACED;
+		color: $secondary;
+	}
+}
+
+.site-social--linkedin {
+	&:before {
+		content: 'l';
+	}
+
+	&:hover:before {
+		color: #3399CC;
+		color: $secondary;
+	}
+}
+
+.site-social--meetup {
+	&:before {
+		content: 'k';
+	}
+
+	&:hover:before {
+		color: #E51937;
+		color: $secondary;
 	}
 }

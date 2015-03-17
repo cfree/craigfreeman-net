@@ -24,12 +24,8 @@ body {
 }
 
 a {
+	color: $secondary;
 	text-decoration: none;
-
-	&,
-	&:visited {
-		color: $secondary;
-	}
 }
 
 a:hover,

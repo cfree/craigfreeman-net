@@ -4,8 +4,13 @@
 
 .container {
 	@include container;
+	padding: 0 ($space * 0.5);
+
+	@include breakpoint($break-medium) {
+		padding: 0 ($space * 0.75);
+	}
 }
 
 .site-content {
-	padding-top: 80px;
+	padding-top: $content-vertical-padding;
 }
