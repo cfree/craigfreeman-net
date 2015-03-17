@@ -9,9 +9,15 @@
 
 .content-area {
 	background: $white;
+}
 
+.site-main {
 	p {
 		line-height: 2;
+	}
+
+	a {
+		color: $primary;
 	}
 }
 

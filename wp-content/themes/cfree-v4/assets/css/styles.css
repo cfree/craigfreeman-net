@@ -691,6 +691,10 @@ p + p {
   margin-top: 1.5em;
 }
 
+.intro {
+  font-size: 24px;
+}
+
 dfn,
 cite,
 em,
@@ -946,8 +950,12 @@ big {
 .content-area {
   background: #FFF;
 }
-.content-area p {
+
+.site-main p {
   line-height: 2;
+}
+.site-main a {
+  color: #4D9ABE;
 }
 
 .sticky {

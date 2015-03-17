@@ -84,6 +84,11 @@
 
 					<h6>Heading Level 6</h6>
 
+					<p class="intro">
+						This is an introductory paragraph of text which has all the most common html elements in it such as the <strong>strong element</strong> which is <a href="#">used to give text strong importance</a>. 
+						You could of course use the <b>b element</b> which represents a span of text stylistically different from normal text, without conveying any special importance or relevance. 
+					</p>
+
 					<p>
 						This is a paragraph of text which has all the most common html elements in it such as the <strong>strong element</strong> which is used to give text strong importance. 
 						You could of course use the <b>b element</b> which represents a span of text stylistically different from normal text, without conveying any special importance or relevance. 
