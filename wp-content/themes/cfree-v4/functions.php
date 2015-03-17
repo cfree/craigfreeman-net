@@ -112,7 +112,7 @@ function cfree_scripts() {
 	} else {
 		wp_enqueue_style( 'cfree-style', get_template_directory_uri() . '/assets/css/styles.min.css', array(), CF_ASSETS_VERSION );
 
-		wp_enqueue_script( 'cfree-scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), CF_ASSETS_VERSION, true );
+		wp_enqueue_script( 'cfree-scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array( 'jquery' ), CF_ASSETS_VERSION, true );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
