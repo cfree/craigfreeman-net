@@ -27,6 +27,7 @@
 
 <body <?php body_class(); ?>>
 <div class="site">
+	<div class="breakpoint-context"></div>
 	<!--[if lt IE 8]>
 	    <p class="browserupgrade">
 	    	You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
@@ -38,11 +39,16 @@
 			<div class="site-branding">
 				<h1 class="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<!--img class="site-title__logo" width="100" height="50" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-header.svg" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" /-->
-						<img class="site-title__logo" width="100" height="50" src="http://placehold.it/180x90" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
+						<img class="site-title__logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
 					</a>
 				</h1>
 			</div><!-- .site-branding -->
+
+			<ul class="site-header__social">
+				<li><a class="site-social site-social--twitter" title="Twitter" href="https://twitter.com/craigfreeman" target="_blank"><?php _e( 'Twitter', 'cfree' ); ?></a></li>
+				<li><a class="site-social site-social--linkedin" title="LinkedIn" href="https://linkedin.com/in/cfree" target="_blank"><?php _e( 'LinkedIn', 'cfree' ); ?></a></li>
+				<li><a class="site-social site-social--meetup" title="Denver Code Club" href="http://meetup.com/denver-code-club" target="_blank"><?php _e( 'Denver Code Club', 'cfree' ); ?></a></li>
+			</ul>
 
 			<nav class="site-navigation" role="navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'cfree' ); ?></button>
@@ -58,7 +64,7 @@
 
 	<div id="content" class="site-content">
 		<div id="primary" class="content-area">
-			<section class="masthead">
+			<section class="masthead masthead--home">
 				
 			</section>
 
