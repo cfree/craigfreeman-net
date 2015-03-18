@@ -23,6 +23,8 @@ h6 {
 }
 
 p {
+	margin: 0;
+
 	& + p {
 		margin-top: 1.5em;
 	}
@@ -48,10 +50,10 @@ address {
 }
 
 pre {
-	background: #eee;
+	background: $gray-light;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 1.5rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -65,7 +67,7 @@ tt,
 var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 1.5rem;
 }
 
 abbr,

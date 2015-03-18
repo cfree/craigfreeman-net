@@ -213,7 +213,10 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
 			<div class="site-info">
-				<p><?php printf( __( '&copy; %s Craig Freeman. All rights reserved.', 'cfree' ), date('Y') ); ?></p>
+				<p>
+					<?php printf( __( '&copy; %s Craig Freeman. All rights reserved.', 'cfree' ), date('Y') ); ?><br/>
+					<?php _e( 'Made in', 'cfree' ); ?> <i class="icon-mountain"></i> <?php _e( 'Colorado', 'cfree' ); ?>
+				</p>
 			</div><!-- .site-info -->
 		</div>
 	</footer><!-- #colophon -->

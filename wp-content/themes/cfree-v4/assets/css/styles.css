@@ -629,6 +629,10 @@ ul,
 ol {
   margin: 0 0 1.5em 3em;
 }
+ul li,
+ol li {
+  padding: 9px 0 7px;
+}
 
 ul {
   list-style: disc;
@@ -688,6 +692,9 @@ h6 {
   clear: both;
 }
 
+p {
+  margin: 0;
+}
 p + p {
   margin-top: 1.5em;
 }
@@ -712,10 +719,10 @@ address {
 }
 
 pre {
-  background: #eee;
+  background: #F1F1F1;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
@@ -729,7 +736,7 @@ tt,
 var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 1.5rem;
 }
 
 abbr,
@@ -1070,12 +1077,21 @@ big {
   color: #b1b1b1;
   font-family: "effra", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  padding: 20px 0;
+  letter-spacing: 0.75px;
+  padding: 40px 0;
   text-align: center;
   text-transform: uppercase;
 }
 .site-footer a {
   color: #849aa5;
+}
+.site-footer .icon-mountain {
+  position: relative;
+}
+.site-footer .icon-mountain:before {
+  bottom: -9px;
+  font-size: 30px;
+  position: relative;
 }
 
 .site-navigation {
@@ -1340,7 +1356,7 @@ textarea {
   font-family: "effra", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 80px;
   font-size: 8rem;
-  line-height: 1;
+  line-height: 1.2;
   margin: 0 auto;
   position: relative;
   text-align: center;
@@ -1351,7 +1367,7 @@ textarea {
 }
 
 .masthead__title__two-lines {
-  top: 40%;
+  top: 35%;
 }
 
 .masthead--typewriter {
