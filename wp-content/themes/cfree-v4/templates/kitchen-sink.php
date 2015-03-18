@@ -109,35 +109,6 @@
 						<a href="" class="button button--primary">Button Primary</a>
 						<a href="" class="button button--primary">Button Primary Adjacent</a>
 					</p>
-
-					<form action="">
-						<label for=""></label>
-						<input type="text">
-
-						<label for=""></label>
-						<input type="text">
-
-						<label for=""></label>
-						<input type="text">
-
-						<label for=""></label>
-						<input type="text">
-
-						<label for=""></label>
-						<input type="text">
-
-						<label for=""></label>
-						<input type="text">
-
-						<label for=""></label>
-						<textarea name="" id="" cols="30" rows="10">
-							
-						</textarea>
-
-						<button>Send</button>
-						<button type="reset">Clear</button>
-
-					</form>
 							 
 					<ol>
 						<li>List item one</li>
@@ -173,7 +144,11 @@
 						}
 					</pre>
 
+					<hr>
+
 					<p>This wraps your code in <code>pre</code> tags and <code>code</code> tags.</p>
+
+					<hr>
 
 					<table>
 						<thead>

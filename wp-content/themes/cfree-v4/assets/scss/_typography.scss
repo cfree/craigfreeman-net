@@ -23,11 +23,7 @@ h6 {
 }
 
 p {
-	margin: 0;
-
-	& + p {
-		margin-top: 1.5em;
-	}
+	margin: 0 0 1.5em;
 }
 
 .intro {

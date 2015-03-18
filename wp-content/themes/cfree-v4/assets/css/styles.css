@@ -615,13 +615,28 @@ q:after {
 
 blockquote,
 q {
-  quotes: "" "";
+  padding: 40px 0;
+  text-align: center;
+}
+blockquote p,
+q p {
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-style: italic;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  width: 70%;
+}
+blockquote p + p,
+q p + p {
+  margin-top: 1.5em;
 }
 
 hr {
-  background-color: #F1F1F1;
+  background: url("../img/lines-gray.png") left bottom repeat-x;
   border: 0;
-  height: 1px;
+  height: 3px;
   margin-bottom: 1.5em;
 }
 
@@ -693,10 +708,7 @@ h6 {
 }
 
 p {
-  margin: 0;
-}
-p + p {
-  margin-top: 1.5em;
+  margin: 0 0 1.5em;
 }
 
 .intro {
@@ -1122,7 +1134,8 @@ big {
 }
 .site-navigation .menu li {
   display: inline-block;
-  margin-left: 20px;
+  margin: 0 0 0 20px;
+  padding: 0;
 }
 .site-navigation .menu a {
   color: #FFF;
