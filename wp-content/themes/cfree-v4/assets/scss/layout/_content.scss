@@ -10,15 +10,10 @@
 .content-area {
 	@include clearfix;
 	background: $white;
-}
-
-.site-main {
-	@include breakpoint($break-medium) {
-		@include span(isolate 9 at 3);
-	}
 
 	p {
 		line-height: 2;
+		text-align: justify;
 	}
 }
 

@@ -7,6 +7,12 @@
  * @package cfree
  */
 ?>
+	<section class="section--dark">
+		<div class="container">
+			<a class="button--secondary--ghost-on-hover button--message js-message" href="#message" data-addr="craigfreeman@gmail.com">craigfreeman<i class="icon-atmark"></i>gmail</a>
+		</div>
+	</section>
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
 			<div class="site-info">

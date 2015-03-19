@@ -62,6 +62,7 @@ $max-width: 1200px;
 $susy: (
 	columns: 12,
 	container: $max-width,
+	gutters: 1/2,
 	debug: (
 		output: overlay,
 		toggle: top right,
