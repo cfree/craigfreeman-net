@@ -46,6 +46,7 @@
 				<li><a class="site-social site-social--twitter" title="Twitter" href="https://twitter.com/craigfreeman" target="_blank"><?php _e( 'Twitter', 'cfree' ); ?></a></li>
 				<li><a class="site-social site-social--linkedin" title="LinkedIn" href="https://linkedin.com/in/cfree" target="_blank"><?php _e( 'LinkedIn', 'cfree' ); ?></a></li>
 				<li><a class="site-social site-social--meetup" title="Denver Code Club" href="http://meetup.com/denver-code-club" target="_blank"><?php _e( 'Denver Code Club', 'cfree' ); ?></a></li>
+				<li><a class="site-social site-social--message js-message" title="Message Me" href="#" data-addr="craigfreeman@gmail.com" target="_blank"><?php _e( 'Message Me', 'cfree' ); ?></a></li>
 			</ul>
 
 			<nav class="site-navigation" role="navigation">
