@@ -37,61 +37,61 @@ get_header();
 						<h2 class="home__heading heading__design"><?php _e( 'Design', 'cfree' ); ?></h2>
 						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in, ut, turpis sed integer elit a porttitor, nisi a urna, nascetur, sociis massa sociis porttitor, in mattis lectus scelerisque. Ultrices enim a nisi nunc montes non dapibus augue quis etiam! Est. Placerat mauris?</p>
 					</div>
+					<div class="home__breakdown--front">
+						<h2 class="heading__front"><?php _e( 'Front-End', 'cfree' ); ?></h2>
+						<p> Vel, a phasellus lacus a duis parturient, tincidunt enim, rhoncus sed magna, est proin urna? Risus ultrices porta, porta nisi, et adipiscing aliquam nascetur nec, vel integer platea auctor nec elit vel turpis et in scelerisque penatibus </p>
+					</div>
 					<div class="home__breakdown--back">
 						<h2 class="heading__back"><?php _e( 'Back-End', 'cfree' ); ?></h2>
 						<p> Vel, a phasellus lacus a duis parturient, tincidunt enim, rhoncus sed magna, est proin urna? Risus ultrices porta, porta nisi, et adipiscing aliquam nascetur nec, vel integer platea auctor nec elit vel turpis et in scelerisque penatibus </p>
 					</div>
-					<div class="home__breakdown--front">
-						<h2 class="heading__front"><?php _e( 'Front-End', 'cfree' ); ?></h2>
-						<p> Vel, a phasellus lacus a duis parturient, tincidunt enim, rhoncus sed magna, est proin urna? Risus ultrices porta, porta nisi, et adipiscing aliquam nascetur nec, vel integer platea auctor nec elit vel turpis et in scelerisque penatibus </p>
-					</div>		
 				</div><!-- .container -->
 			</section>
 
 			<section class="home__portfolio container">
-				<h2>Portfolio</h2>
+				<h2><?php _e( 'Portfolio', 'cfree' ); ?></h2>
 				
 				<div class="has-columns">
-					<article class="columns--three">
+					<article class="columns--three portfolio-item">
 						<h3><a href="#">Portfolio Item One</a></h3>
-						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in...</p>
-						<a href="#" class="read-more">Read More</a>
+						<a href="#" class="button button--primary read-more"><?php _e( 'Read More', 'cfree' ); ?></a>
+						<img src="http://placekitten.com/g/375/250">
 					</article>
-					<article class="columns--three">
+					<article class="columns--three portfolio-item">
 						<h3><a href="#">Portfolio Item Two</a></h3>
-						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in...</p>
-						<a href="#" class="read-more">Read More</a>
+						<a href="#" class="button button--primary read-more">Read More</a>
+						<img src="http://placekitten.com/g/375/250">
 					</article>
-					<article class="columns--three">
+					<article class="columns--three portfolio-item">
 						<h3><a href="#">Portfolio Item Three</a></h3>
-						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in...</p>
-						<a href="#" class="read-more">Read More</a>
+						<a href="#" class="button button--primary read-more">Read More</a>
+						<img src="http://placekitten.com/g/375/250">
 					</article>
 				</div>
 
 				<hr>
 
 				<p>
-					<a href="#" class="alignright button button--primary--ghost">View All</a>
+					<a href="#" class="alignright button button--primary--ghost"><?php _e( 'View All', 'cfree' ); ?></a>
 				</p>
 			</section>
 
 			<section class="section--dark">
 				<div class="container">
-					<a href="https://github.com/cfree" class="button button--primary--ghost-on-hover">GitHub</a>
-					<a href="<?php echo site_url( '/resume' ); ?>" class="button button--primary--ghost-on-hover">Resume</a>
-					<a href="http://linkedin.com/in/cfree" class="button button--primary--ghost-on-hover">LinkedIn</a>
+					<a href="https://github.com/cfree" class="button button--primary--ghost-on-hover"><?php _e( 'GitHub', 'cfree' ); ?></a>
+					<a href="<?php echo site_url( '/resume' ); ?>" class="button button--primary--ghost-on-hover"><?php _e( 'Resume', 'cfree' ); ?></a>
+					<a href="http://linkedin.com/in/cfree" class="button button--primary--ghost-on-hover"><?php _e( 'LinkedIn', 'cfree' ); ?></a>
 				</div><!-- .container -->
 			</section>
 
 			<section class="home__articles container">
-				<h2>Articles</h2>
+				<h2><?php _e( 'Articles', 'cfree' ); ?></h2>
 
 				<div class="has-columns">
 					<article class="columns--three">
 						<h3><a href="#">Text Article One</a></h3>
 						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in...</p>
-						<a href="#" class="read-more">Read More</a>
+						<a href="#" class="read-more"><?php _e( 'Read More', 'cfree' ); ?></a>
 					</article>
 					<article class="columns--three">
 						<h3><a href="#">Text Article Two</a></h3>
@@ -123,7 +123,7 @@ get_header();
 				<hr>
 
 				<p>
-					<a href="#" class="alignright button button--primary--ghost">View All</a>
+					<a href="#" class="alignright button button--primary--ghost">View All', 'cfree' ); ?></a>
 				</p>
 			</section>
 		</div><!-- #primary -->

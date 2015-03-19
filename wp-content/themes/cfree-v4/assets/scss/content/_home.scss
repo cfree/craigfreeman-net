@@ -15,25 +15,70 @@
 .home__breakdown--stack {
 	background: $gray-light;
 	padding-top: 1.5em;
-	padding-bottom: 1.5em;
+	position: relative;
 	text-align: justify;
 
 	@include breakpoint($break-xl) {
 		padding-top: 3em;
-		padding-bottom: 3em;
+		padding-bottom: 1.5em;
 	}
 }
 
 .home__breakdown--design {
-	@include span(5 first);
+	@include span(5 at 5 break);
+	@include push(5);
+	position: relative;
+	z-index: 2;
+
+	&:before {
+		@include icon;
+		color: darken($gray-light, 3%);
+		content: 'd';
+		font-size: 225px;
+		font-size: 22.5rem;
+		right: span(13);
+		position: absolute;
+		top: 5%;
+		z-index: -1;
+	}
 }
 
 .home__breakdown--back {
-	@include span(5 last);
+	@include span(5 at 5 break);
+	@include push(5);
+	position: relative;
+	z-index: 2;
+
+	&:before {
+		@include icon;
+		color: darken($gray-light, 3%);
+		content: 'c';
+		font-size: 250px;
+		font-size: 25rem;
+		right: span(13);
+		position: absolute;
+		top: 0;
+		z-index: -1;
+	}
 }
 
 .home__breakdown--front {
-	@include span(isolate 6 at 4 break);
+	@include span(5 at 3 break);
+	@include push(2);
+	position: relative;
+	z-index: 2;
+
+	&:before {
+		@include icon;
+		color: darken($gray-light, 3%);
+		content: 'm';
+		font-size: 270px;
+		font-size: 27rem;
+		left: span(12.5);
+		position: absolute;
+		top: 0;
+		z-index: -1;
+	}
 }
 
 .home__portfolio,

@@ -23,6 +23,18 @@
 			display: inline-block;
 			margin: 0 0 0 $space;
 			padding: 0;
+
+			&:hover,
+			&.current-menu-item {
+				a {
+					text-decoration: none;
+
+					&:before {
+						left: 0;
+						max-width: 100%;
+					}
+				}
+			}
 		}
 
 		a {
@@ -46,15 +58,6 @@
 				position: absolute;
 				transition: all 0.2s;
 				width: 100%;
-			}
-
-			&:hover {
-				text-decoration: none;
-
-				&:before {
-					left: 0;
-					max-width: 100%;
-				}
 			}
 		}
 	}
