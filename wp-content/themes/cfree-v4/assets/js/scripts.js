@@ -90,6 +90,12 @@
 
 	$(document).ready(function() {
 		CFree.init();
+	})
+	.on('click', '.js-message', function(e) {
+		var $this = $(this),
+			addr = $this.attr('data-addr');
+
+		$this.attr('href', 'mailto:' + addr);
 	});
 
 })(jQuery);

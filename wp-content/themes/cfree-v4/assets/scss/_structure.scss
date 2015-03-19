@@ -3,6 +3,7 @@
 //------------------------------------------------
 
 .container {
+	@include clearfix;
 	@include container;
 	@include show-grid(overlay);
 	padding: 0 ($space * 0.5);

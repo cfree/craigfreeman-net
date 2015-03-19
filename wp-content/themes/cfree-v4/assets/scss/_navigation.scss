@@ -118,10 +118,6 @@
 	text-indent: -9999em;
 	width: 30px;
 
-	&:hover {
-		text-decoration: none;
-	}
-
 	&:before {
 		@include transition(color 0.2s);
 		@include icon;
@@ -132,27 +128,25 @@
 		text-align: center;
 		text-indent: 0;
 	}
+
+	&:hover {
+		text-decoration: none;
+
+		&:before {
+			color: $secondary;
+		}
+	}
 }
 
 .site-social--twitter {
 	&:before {
 		content: 't';
 	}
-
-	&:hover:before {
-		color: #00ACED;
-		color: $secondary;
-	}
 }
 
 .site-social--linkedin {
 	&:before {
 		content: 'l';
-	}
-
-	&:hover:before {
-		color: #3399CC;
-		color: $secondary;
 	}
 }
 
@@ -162,9 +156,11 @@
 		font-size: 35px;
 		line-height: 32px;
 	}
+}
 
-	&:hover:before {
-		color: #E51937;
-		color: $secondary;
+.site-social--message {
+	&:before {
+		content: 'e';
+		font-size: 27px;
 	}
 }

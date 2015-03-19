@@ -1,0 +1,14 @@
+//------------------------------------------------
+// Content - Home
+//------------------------------------------------
+
+// --------
+// Sections
+// --------
+
+.home__breakdown--front-back {
+	background: lighten($gray-dark, 2%) url('../img/bg-grid-dark.svg') center;
+	color: $white;
+	padding: ($space * 4) 0;
+	text-align: center;
+}
