@@ -1095,7 +1095,6 @@ big {
 }
 .content-area p {
   line-height: 1.6;
-  text-align: justify;
 }
 
 .sticky {
@@ -1527,6 +1526,9 @@ textarea {
   background-image: url("../img/heroes/typewriter.jpg");
 }
 
+.home__intro {
+  text-align: justify;
+}
 @media (min-width: 720px) {
   .home__intro {
     width: 65.71429%;
@@ -1641,7 +1643,6 @@ textarea {
 .home__articles {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
-  text-align: justify;
 }
 @media (min-width: 1800px) {
   .home__portfolio,
@@ -1858,6 +1859,37 @@ textarea {
   bottom: -8px;
   font-size: 30px;
   position: relative;
+}
+
+.read-more {
+  font-family: "effra", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.read-more:after {
+  font-family: "cf-net" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '>';
+  font-size: 9px;
+  font-size: 0.9rem;
+  margin: 0 0 0 5px;
+  position: relative;
+  right: 0;
+  transition: right 0.3s;
+}
+.read-more:hover {
+  text-decoration: none;
+}
+.read-more:hover:after {
+  right: -3px;
 }
 
 button {

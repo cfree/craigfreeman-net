@@ -7,6 +7,8 @@
 // --------
 
 .home__intro {
+	text-align: justify;
+
 	@include breakpoint($break-medium) {
 		@include span(isolate 8 at 3);
 	}
@@ -86,7 +88,6 @@
 .home__articles {
 	padding-top: 1.5em;
 	padding-bottom: 1.5em;
-	text-align: justify;
 
 	@include breakpoint($break-xl) {
 		padding-top: 3em;

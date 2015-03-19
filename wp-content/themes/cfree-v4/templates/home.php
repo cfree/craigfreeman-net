@@ -55,21 +55,21 @@ get_header();
 					<article class="columns--three portfolio-item">
 						<div class="portfolio-item__content">
 							<h3>Portfolio Item One</h3>
-							<a href="#" class="button button--primary"><?php _e( 'Read More', 'cfree' ); ?></a>
+							<a href="#" class="button button--primary"><?php _e( 'View', 'cfree' ); ?></a>
 						</div>
 						<img src="http://placekitten.com/g/375/250">
 					</article>
 					<article class="columns--three portfolio-item">
 						<div class="portfolio-item__content">
 							<h3>Portfolio Item Two, now with two lines</h3>
-							<a href="#" class="button button--primary">Read More</a>
+							<a href="#" class="button button--primary">View</a>
 						</div>
 						<img src="http://placekitten.com/g/375/250">
 					</article>
 					<article class="columns--three portfolio-item">
 						<div class="portfolio-item__content">
 							<h3>Portfolio Item Three</h3>
-							<a href="#" class="button button--primary">Read More</a>
+							<a href="#" class="button button--primary">View</a>
 						</div>
 						<img src="http://placekitten.com/g/375/250">
 					</article>
@@ -92,35 +92,29 @@ get_header();
 				<h2><?php _e( 'Articles', 'cfree' ); ?></h2>
 
 				<div class="has-columns">
-					<article class="columns--three">
+					<article class="columns--three article-item">
 						<h3><a href="#">Text Article One</a></h3>
-						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in...</p>
-						<a href="#" class="read-more"><?php _e( 'Read More', 'cfree' ); ?></a>
+						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in... <a href="#" class="read-more"><?php _e( 'More', 'cfree' ); ?></a></p>
 					</article>
-					<article class="columns--three">
-						<h3><a href="#">Text Article Two</a></h3>
-						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in...</p>
-						<a href="#" class="read-more">Read More</a>
+					<article class="columns--three article-item">
+						<h3><a href="#">Text Article Two, now with two lines</a></h3>
+						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in... <a href="#" class="read-more"><?php _e( 'More', 'cfree' ); ?></a></p>
 					</article>
-					<article class="columns--three">
+					<article class="columns--three article-item">
 						<h3><a href="#">Text Article Three</a></h3>
-						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in...</p>
-						<a href="#" class="read-more">Read More</a>
+						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in... <a href="#" class="read-more"><?php _e( 'More', 'cfree' ); ?></a></p>
 					</article>
-					<article class="columns--three">
+					<article class="columns--three article-item">
 						<h3><a href="#">Text Article Four</a></h3>
-						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in...</p>
-						<a href="#" class="read-more">Read More</a>
+						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in... <a href="#" class="read-more"><?php _e( 'More', 'cfree' ); ?></a></p>
 					</article>
-					<article class="columns--three">
+					<article class="columns--three article-item">
 						<h3><a href="#">Text Article Five</a></h3>
-						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in...</p>
-						<a href="#" class="read-more">Read More</a>
+						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in... <a href="#" class="read-more"><?php _e( 'More', 'cfree' ); ?></a></p>
 					</article>
-					<article class="columns--three">
+					<article class="columns--three article-item">
 						<h3><a href="#">Text Article Six</a></h3>
-						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in...</p>
-						<a href="#" class="read-more">Read More</a>
+						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in... <a href="#" class="read-more"><?php _e( 'More', 'cfree' ); ?></a></p>
 					</article>
 				</div>
 

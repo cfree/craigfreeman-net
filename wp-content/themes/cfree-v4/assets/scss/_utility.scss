@@ -226,6 +226,32 @@
 	}
 }
 
+.read-more {
+	font-family: $font-headings;
+	font-size: 14px;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+
+	&:after {
+		@include icon;
+		content: '>';
+		font-size: 9px;
+		font-size: 0.9rem;
+		margin: 0 0 0 5px;
+		position: relative;
+		right: 0;
+		transition: right 0.3s;
+	}
+
+	&:hover {
+		text-decoration: none;
+
+		&:after {
+			right: -3px;
+		}
+	}
+}
+
 
 
 
