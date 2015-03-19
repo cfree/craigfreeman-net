@@ -7,17 +7,17 @@
  * @package cfree
  */
 ?>
-
-	</div><!-- #content -->
-
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'cfree' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'cfree' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'cfree' ), 'cfree', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="container">
+			<div class="site-info">
+				<p>
+					<?php printf( __( '&copy; %s Craig Freeman. All rights reserved.', 'cfree' ), date('Y') ); ?><br/>
+					<?php _e( 'Made in', 'cfree' ); ?> <i class="icon-mountain"></i> <?php _e( 'Colorado', 'cfree' ); ?>
+				</p>
+			</div><!-- .site-info -->
+		</div>
 	</footer><!-- #colophon -->
-</div><!-- #page -->
+</div><!-- .site -->
 
 <?php wp_footer(); ?>
 

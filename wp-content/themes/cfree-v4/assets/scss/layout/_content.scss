@@ -8,10 +8,15 @@
 }
 
 .content-area {
+	@include clearfix;
 	background: $white;
 }
 
 .site-main {
+	@include breakpoint($break-medium) {
+		@include span(isolate 9 at 3);
+	}
+
 	p {
 		line-height: 2;
 	}
@@ -30,7 +35,11 @@
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 1em;
+
+	@include breakpoint($break-xl) {
+		margin-bottom: 4.5em;
+	}
 }
 
 .byline,

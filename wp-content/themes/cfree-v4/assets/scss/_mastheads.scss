@@ -4,8 +4,21 @@
 
 .masthead {
 	@include background-size(cover);
-	height: 600px;
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 250px;
+	margin-bottom: 1em;
 	position: relative;
+
+	@include breakpoint($break-medium) {
+		height: 400px;
+	}
+
+	@include breakpoint($break-xl) {
+		height: 600px;
+		margin-bottom: 3em;
+	}
 
 	&:before {
 		background: $primary;
@@ -39,9 +52,15 @@
 }
 
 .masthead__title__two-lines {
-	top: 35%;
+
+	@include breakpoint($break-large) {
+		top: 26%;
+	}
+	@include breakpoint($break-xl) {
+		top: 35%;
+	}
 }
 
 .masthead--typewriter {
-	background: url('../img/heroes/typewriter.jpg') center no-repeat;
+	background-image: url('../img/heroes/typewriter.jpg');
 }

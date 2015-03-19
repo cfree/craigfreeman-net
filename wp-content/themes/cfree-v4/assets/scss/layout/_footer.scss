@@ -7,7 +7,7 @@
 	color: darken($gray-light, 25%);
 	font-family: $font-headings;
 	font-size: 14px;
-	letter-spacing: 0.75px;
+	letter-spacing: 1.25px;
 	padding: ($space * 2) 0;
 	text-align: center;
 	text-transform: uppercase;
@@ -16,7 +16,12 @@
 		color: lighten($gray-dark, 30%);
 	}
 
+	p {
+		margin: 0;
+	}
+
 	.icon-mountain {
+		margin-left: 1px;
 		position: relative;
 
 		&:before {

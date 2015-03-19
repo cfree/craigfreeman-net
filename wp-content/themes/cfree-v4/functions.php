@@ -7,6 +7,10 @@
 
 define( 'CF_ASSETS_VERSION', '1.0.0' );
 
+if ( file_exists( dirname( __FILE__ ) . '/plugins/CMB2/init.php' ) ) {
+	require_once dirname( __FILE__ ) . '/plugins/CMB2/init.php';
+}
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */

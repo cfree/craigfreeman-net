@@ -48,7 +48,9 @@ $font-serif: 'ff-tisa-web-pro', Georgia, 'Times New Roman', serif; // Typekit
 $break-small: 480px;
 $break-medium: 720px;
 $break-large: 960px;
+$break-xl: 1800px;
 $max-width: 1200px;
+
 
 
 
@@ -59,5 +61,11 @@ $max-width: 1200px;
 
 $susy: (
 	columns: 12,
-	container: $max-width
+	container: $max-width,
+	debug: (
+		output: overlay,
+		toggle: top right,
+		color: blue,
+		image: show
+	)
 );
