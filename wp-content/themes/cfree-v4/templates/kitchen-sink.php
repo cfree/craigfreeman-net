@@ -47,11 +47,11 @@ get_header();
 
 				<p><a href="" class="button button--primary">Button Primary Centered</a></p>
 
-				<p><a href="" class="button button--primary__ghost">Button Primary Ghost Centered</a></p>
+				<p><a href="" class="button button--primary--ghost">Button Primary Ghost Centered</a></p>
 
 				<p><a href="" class="button button--secondary">Button Secondary</a></p>
 
-				<p><a href="" class="button button--secondary__ghost">Button Secondary Ghost</a></p>
+				<p><a href="" class="button button--secondary--ghost">Button Secondary Ghost</a></p>
 
 				<p>
 					<a href="" class="button button--primary">Button Primary</a>
