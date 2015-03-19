@@ -1538,7 +1538,8 @@ textarea {
 
 .home__breakdown--stack {
   background: #F1F1F1;
-  padding-top: 1.5em;
+  padding-top: 2em;
+  padding-bottom: 1.5em;
   position: relative;
   text-align: justify;
 }
@@ -1648,6 +1649,38 @@ textarea {
     padding-top: 3em;
     padding-bottom: 3em;
   }
+}
+
+.portfolio-item {
+  position: relative;
+}
+.portfolio-item:before, .portfolio-item:after {
+  content: '';
+  display: table;
+}
+.portfolio-item:after {
+  clear: both;
+}
+.portfolio-item:hover .portfolio-item__content {
+  opacity: 1;
+}
+.portfolio-item img {
+  float: left;
+  height: auto;
+  width: 100%;
+}
+
+.portfolio-item__content {
+  background: rgba(241, 241, 241, 0.7);
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  transition: opacity 0.3s;
+  width: 100%;
+}
+.portfolio-item__content h3 {
+  margin: 20% 0 5%;
 }
 
 .screen-reader-text {
@@ -1854,7 +1887,7 @@ button {
 .has-columns .columns--three {
   width: 31.42857%;
   float: left;
-  margin-bottom: 40px;
+  margin-bottom: 2.85714%;
 }
 .has-columns .columns--three:nth-child(3n + 1) {
   margin-left: 0;

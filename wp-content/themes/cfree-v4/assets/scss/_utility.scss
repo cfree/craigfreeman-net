@@ -270,7 +270,7 @@ button {
 
 	.columns--three {
 		@include gallery(4 of 12);
-		margin-bottom: ($space * 2);
+		margin-bottom: gutter(12);
 	}
 }
 

@@ -34,15 +34,15 @@ get_header();
 			<section class="home__breakdown--stack">
 				<div class="container">
 					<div class="home__breakdown--design">
-						<h2 class="home__heading heading__design"><?php _e( 'Design', 'cfree' ); ?></h2>
+						<h2><?php _e( 'Design', 'cfree' ); ?></h2>
 						<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in, ut, turpis sed integer elit a porttitor, nisi a urna, nascetur, sociis massa sociis porttitor, in mattis lectus scelerisque. Ultrices enim a nisi nunc montes non dapibus augue quis etiam! Est. Placerat mauris?</p>
 					</div>
 					<div class="home__breakdown--front">
-						<h2 class="heading__front"><?php _e( 'Front-End', 'cfree' ); ?></h2>
+						<h2><?php _e( 'Front-End', 'cfree' ); ?></h2>
 						<p> Vel, a phasellus lacus a duis parturient, tincidunt enim, rhoncus sed magna, est proin urna? Risus ultrices porta, porta nisi, et adipiscing aliquam nascetur nec, vel integer platea auctor nec elit vel turpis et in scelerisque penatibus </p>
 					</div>
 					<div class="home__breakdown--back">
-						<h2 class="heading__back"><?php _e( 'Back-End', 'cfree' ); ?></h2>
+						<h2><?php _e( 'Back-End', 'cfree' ); ?></h2>
 						<p> Vel, a phasellus lacus a duis parturient, tincidunt enim, rhoncus sed magna, est proin urna? Risus ultrices porta, porta nisi, et adipiscing aliquam nascetur nec, vel integer platea auctor nec elit vel turpis et in scelerisque penatibus </p>
 					</div>
 				</div><!-- .container -->
@@ -53,23 +53,27 @@ get_header();
 				
 				<div class="has-columns">
 					<article class="columns--three portfolio-item">
-						<h3><a href="#">Portfolio Item One</a></h3>
-						<a href="#" class="button button--primary read-more"><?php _e( 'Read More', 'cfree' ); ?></a>
+						<div class="portfolio-item__content">
+							<h3>Portfolio Item One</h3>
+							<a href="#" class="button button--primary"><?php _e( 'Read More', 'cfree' ); ?></a>
+						</div>
 						<img src="http://placekitten.com/g/375/250">
 					</article>
 					<article class="columns--three portfolio-item">
-						<h3><a href="#">Portfolio Item Two</a></h3>
-						<a href="#" class="button button--primary read-more">Read More</a>
+						<div class="portfolio-item__content">
+							<h3>Portfolio Item Two, now with two lines</h3>
+							<a href="#" class="button button--primary">Read More</a>
+						</div>
 						<img src="http://placekitten.com/g/375/250">
 					</article>
 					<article class="columns--three portfolio-item">
-						<h3><a href="#">Portfolio Item Three</a></h3>
-						<a href="#" class="button button--primary read-more">Read More</a>
+						<div class="portfolio-item__content">
+							<h3>Portfolio Item Three</h3>
+							<a href="#" class="button button--primary">Read More</a>
+						</div>
 						<img src="http://placekitten.com/g/375/250">
 					</article>
 				</div>
-
-				<hr>
 
 				<p>
 					<a href="#" class="alignright button button--primary--ghost"><?php _e( 'View All', 'cfree' ); ?></a>
@@ -123,7 +127,7 @@ get_header();
 				<hr>
 
 				<p>
-					<a href="#" class="alignright button button--primary--ghost">View All', 'cfree' ); ?></a>
+					<a href="#" class="alignright button button--primary--ghost"><?php _e( 'View All', 'cfree' ); ?></a>
 				</p>
 			</section>
 		</div><!-- #primary -->

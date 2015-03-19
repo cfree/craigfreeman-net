@@ -1,0 +1,36 @@
+//------------------------------------------------
+// Content - Portfolio
+//------------------------------------------------
+
+// ---------------
+// Portfolio Items
+// ---------------
+
+.portfolio-item {
+	@include clearfix;
+	position: relative;
+
+	&:hover .portfolio-item__content {
+		opacity: 1;
+	}
+	
+	img {
+		float: left;
+		height: auto;
+		width: 100%;
+	}
+}
+
+.portfolio-item__content {
+	background: rgba($gray-light, 0.7);
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	transition: opacity 0.3s;
+	width: 100%;
+
+	h3 {
+		margin: 20% 0 5%;
+	}
+}
