@@ -21,8 +21,8 @@ get_header(); ?>
 			</div>
 		</section>
 
-		<main id="main" class="site-main" role="main">
-			<div class="container">
+		<main id="main" class="site-main container" role="main">
+			<div class="page-content">
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'content', 'page' ); ?>

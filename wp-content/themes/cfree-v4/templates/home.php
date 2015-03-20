@@ -14,9 +14,8 @@ get_header();
 	<div id="primary" class="content-area">
 		<section class="masthead masthead--typewriter">
 			<div class="container">
-				<h1 class="masthead__title masthead__title--two-lines">
-					<?php _e( 'Front-End Engineering', 'cfree' ); ?>
-				</h1>
+				<h1 class="masthead__title has-subtitle"><?php bloginfo( 'title', 'cfree' ); ?></h1>
+				<div class="masthead__subtitle"><?php bloginfo( 'description' ); ?></div>
 			</div>
 		</section>
 
