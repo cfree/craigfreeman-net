@@ -16,6 +16,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
 			<div class="site-info">
+				<a href="#" class="back-to-top js-scroll-up"><?php _e( 'Back to Top', 'cfree' ); ?></a>
 				<p>
 					<?php printf( __( '&copy; %s Craig Freeman. All rights reserved.', 'cfree' ), date('Y') ); ?><br/>
 					<?php _e( 'Made in', 'cfree' ); ?> <i class="icon-mountain"></i> <?php _e( 'Colorado', 'cfree' ); ?>

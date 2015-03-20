@@ -1102,7 +1102,7 @@ big {
 }
 
 .hentry {
-  margin: 0 0 1em;
+  margin: 0 0 1.5em;
 }
 @media (min-width: 1800px) {
   .hentry {
@@ -1234,6 +1234,10 @@ big {
   position: relative;
 }
 
+.site-info {
+  position: relative;
+}
+
 .site-navigation {
   width: 74.28571%;
   float: right;
@@ -1265,10 +1269,10 @@ big {
   margin: 0 0 0 20px;
   padding: 0;
 }
-.site-navigation .menu li:hover a, .site-navigation .menu li.current-menu-item a {
+.site-navigation .menu li:hover a, .site-navigation .menu li.current-menu-item a, .site-navigation .menu li.current_page_parent a {
   text-decoration: none;
 }
-.site-navigation .menu li:hover a:before, .site-navigation .menu li.current-menu-item a:before {
+.site-navigation .menu li:hover a:before, .site-navigation .menu li.current-menu-item a:before, .site-navigation .menu li.current_page_parent a:before {
   left: 0;
   max-width: 100%;
 }
@@ -1502,24 +1506,40 @@ textarea {
   font-size: 80px;
   font-size: 8rem;
   line-height: 1.2;
-  margin: 0 auto;
+  margin: 2em auto 0;
   position: relative;
   text-align: center;
   text-shadow: 3px 3px #3D4C53;
   text-transform: uppercase;
-  top: 24%;
   width: 70%;
+}
+.masthead__title.has-subtitle {
+  margin-top: 1.65em;
 }
 
 @media (min-width: 960px) {
   .masthead__title--two-lines {
-    top: 26%;
+    margin-top: 1.35em;
   }
 }
 @media (min-width: 1800px) {
   .masthead__title--two-lines {
-    top: 35%;
+    margin-top: 35%;
   }
+}
+
+.masthead__subtitle {
+  color: #FFF;
+  font-family: "effra", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  font-size: 4rem;
+  line-height: 1;
+  margin: 0.2em auto 0;
+  position: relative;
+  text-align: center;
+  text-shadow: 2px 2px #3D4C53;
+  text-transform: uppercase;
+  width: 80%;
 }
 
 .masthead--typewriter {
@@ -1890,6 +1910,43 @@ textarea {
 }
 .read-more:hover:after {
   right: -3px;
+}
+
+.back-to-top {
+  background: #F1F1F1;
+  border: 3px solid #b1b1b1;
+  height: 35px;
+  margin-top: -18px;
+  overflow: hidden;
+  position: absolute;
+  right: -60px;
+  text-decoration: none;
+  text-indent: -9999em;
+  top: 50%;
+  width: 35px;
+}
+.back-to-top:before {
+  font-family: "cf-net" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #b1b1b1;
+  content: '^';
+  display: block;
+  font-size: 20px;
+  height: 100%;
+  line-height: 30px;
+  text-align: center;
+  text-indent: 0;
+  width: 100%;
+}
+.back-to-top:hover {
+  text-decoration: none;
 }
 
 button {

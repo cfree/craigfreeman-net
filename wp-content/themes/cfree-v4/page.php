@@ -11,25 +11,25 @@
  */
 
 get_header(); ?>
-
+<div id="content" class="site-content">
 	<div id="primary" class="content-area">
+		<section class="masthead masthead--typewriter">
+			<div class="container">
+				<h1 class="masthead__title">
+					<?php the_title(); ?>
+				</h1>
+			</div>
+		</section>
+
 		<main id="main" class="site-main" role="main">
+			<div class="container">
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'content', 'page' ); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
-
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
-
-			<?php endwhile; // end of the loop. ?>
-
+				<?php endwhile; // end of the loop. ?>
+			</div>
 		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+	</div>
+</div>
 <?php get_footer(); ?>

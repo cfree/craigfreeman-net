@@ -252,6 +252,37 @@
 	}
 }
 
+.back-to-top {
+	background: $gray-light;
+	border: 3px solid darken($gray-light, 25%);
+	height: 35px;
+	margin-top: -18px;
+	overflow: hidden;
+	position: absolute;
+	right: -60px;
+	text-decoration: none;
+	text-indent: -9999em;
+	top: 50%;
+	width: 35px;
+
+	&:before {
+		@include icon;
+		color: darken($gray-light, 25%);
+		content: '^';
+		display: block;
+		font-size: 20px;
+		height: 100%;
+		line-height: 30px;
+		text-align: center;
+		text-indent: 0;
+		width: 100%;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 
 
 

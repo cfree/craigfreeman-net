@@ -96,6 +96,11 @@
 			addr = $this.attr('data-addr');
 
 		$this.attr('href', 'mailto:' + addr);
+	})
+	.on('click', '.js-scroll-up', function() {
+		$.animate({
+			scrollTop: $(this).offset().top
+		}, 1000);
 	});
 
 })(jQuery);
