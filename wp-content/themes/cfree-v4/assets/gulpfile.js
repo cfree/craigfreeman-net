@@ -79,6 +79,21 @@ gulp.task('runBower', function() {
 		.pipe(gulp.dest(paths.bower));
 });
 
+// Compress images
+gulp.task('compressImgs', function() {
+	gulp.src(files.all.img)
+		.pipe(
+			filesCached(
+				compressImgs({
+					optimizationLevel: 7,
+					progressive: true,
+					interlaced: true
+				})
+			)
+		)
+		.pipe(gulp.dest(paths.img));
+});
+
 // Set watch mode
 gulp.task('setWatchStatus', function() {
 	watching = true;
@@ -99,21 +114,6 @@ gulp.task('readyStyles', function() {
 gulp.task('readyScripts', function() {
 	// Minify
 	// Concatenate
-});
-
-// Compress images
-gulp.task('compressImgs', function() {
-	gulp.src(files.all.img)
-		.pipe(
-			filesCached(
-				compressImgs({
-					optimizationLevel: 7,
-					progressive: true,
-					interlaced: true
-				})
-			)
-		)
-		.pipe(gulp.dest(paths.img));
 });
 
 

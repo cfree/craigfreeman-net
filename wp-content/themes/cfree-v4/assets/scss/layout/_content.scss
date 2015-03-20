@@ -24,6 +24,14 @@
 // Posts and pages
 // ---------------
 
+.page-content {
+	text-align: justify;
+
+	@include breakpoint($break-medium) {
+		@include span(isolate 8 at 3);
+	}
+}
+
 .sticky {
 	display: block;
 }
@@ -31,7 +39,7 @@
 .hentry {
 	margin: 0 0 1.5em;
 
-	@include breakpoint($break-xl) {
+	@include breakpoint($break-large) {
 		margin-bottom: 4.5em;
 	}
 }
@@ -48,7 +56,6 @@
 	}
 }
 
-.page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
@@ -57,6 +64,142 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+
+
+
+
+// ---
+// 404
+// ---
+
+.error404 {
+	color: $white;
+
+	.container {
+		position: relative;
+	}
+
+	.site-content {
+		@include background-size(cover);
+		background-image: url('../img/404-sm.jpg');
+		background-position: center bottom;
+		height: 100%;
+		left: 0;
+		padding-top: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+
+		@include breakpoint($break-medium) {
+			background-image: url('../img/404.jpg');
+			background-position: center;
+			padding-top: $content-vertical-padding;
+		}
+
+		&:before {
+			background: $secondary;
+			content: '';
+			height: 100%;
+			left: 0;
+			opacity: 0.5;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+		}
+	}
+}
+
+.heading--404 {
+	font-family: $font-headings;
+	font-size: 60px;
+	font-size: 6rem;
+	text-transform: uppercase;
+}
+
+.subheading--404 {
+	margin-bottom: 30px;
+}
+
+.search-form--404 {
+	border-bottom: 3px solid $white;
+	position: relative;
+	width: 100%;
+
+	@include breakpoint($break-small) {
+		width: 300px;
+	}
+
+	input[type="text"] {
+		@include appearance(none);
+		@include box-shadow(none);
+		@include border-radius(0);
+		background: none;
+		border: 0;
+		color: $white;
+		line-height: 30px;
+		padding-right: 33px;
+		width: 100%;
+
+		&:focus {
+			background: rgba($white, 0.3);
+			color: $white;
+			outline: none;
+			outline-style: none;
+		}
+	}
+}
+
+.search-button--404 {
+	background: none;
+	border: none;
+	bottom: 3px;
+	height: 30px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	transition: none;
+	text-indent: -9999em;
+	width: 33px;
+
+	&:before {
+		@include icon;
+		background: transparent;
+		content: 'f';
+		display: block;
+		font-size: 22px;
+		font-size: 2.2rem;
+		height: 100%;
+		line-height: 30px;
+		text-align: center;
+		text-indent: 0;
+		width: 100%;
+	}
+
+	&:hover {
+		@include appearance(none);
+		@include box-shadow(none);
+		background: transparent;
+		border: none;
+		color: $white;
+	}
+}
+
+.notice--404 {
+	bottom: $space;
+	height: 50px;
+	opacity: 0.5;
+	position: absolute;
+	right: $space;
+	width: 87px;
+
+	img {
+		height: auto;
+		width: 100%;
+	}
 }
 
 

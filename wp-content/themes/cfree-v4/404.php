@@ -5,52 +5,48 @@
  * @package cfree
  */
 
-get_header(); ?>
+?><!doctype html>
+<html class="no-js" <?php language_attributes(); ?>>
+<head>
+<script src="//use.typekit.net/fvl4wvq.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'cfree' ); ?></h1>
-				</header><!-- .page-header -->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'cfree' ); ?></p>
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-					<?php get_search_form(); ?>
+<?php wp_head(); ?>
 
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+</head>
 
-					<?php if ( cfree_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php _e( 'Most Used Categories', 'cfree' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php endif; ?>
+<body <?php body_class(); ?>>
+<div class="site">
+	<div class="breakpoint-context"></div>
+	<!--[if lt IE 8]>
+	    <p class="browserupgrade">
+	    	You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+	    </p>
+	<![endif]-->
+	<div id="content" class="site-content">
+		<div class="container">
+			<h1 class="heading--404"><?php _e( 'Uh oh&hellip;', 'cfree' ); ?></h1>
+			<h4 class="subheading--404"><?php _e( 'That page can\'t be found. Care to try again?', 'cfree' ); ?></h4>
 
-					<?php
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'cfree' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
+			<form class="search-form search-form--404" action="<?php echo home_url( '/' ); ?>">
+				<input type="text" name="s">
+				<button class="search-button search-button--404"><?php _e( 'Search', 'cfree' ); ?></button>
+			</form>
+		</div>
 
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_footer(); ?>
+		<div class="notice--404">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="<?php _e( '404', 'cfree' ); ?>">
+		</div>
+	</div>
+</div>
+</body>
+</html>
