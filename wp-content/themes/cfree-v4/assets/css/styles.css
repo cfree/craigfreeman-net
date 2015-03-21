@@ -1216,6 +1216,7 @@ big {
   color: #FFF;
   line-height: 30px;
   padding-right: 33px;
+  transition: background 0.3s;
   width: 100%;
 }
 .search-form--404 input[type="text"]:focus {
@@ -1276,7 +1277,11 @@ big {
   opacity: 0.5;
   position: absolute;
   right: 20px;
+  transition: opacity 0.3s;
   width: 87px;
+}
+.notice--404:hover {
+  opacity: 1;
 }
 .notice--404 img {
   height: auto;

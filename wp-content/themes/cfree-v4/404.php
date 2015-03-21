@@ -27,7 +27,7 @@
 <body <?php body_class(); ?>>
 <div class="site">
 	<div class="breakpoint-context"></div>
-	<!--[if lt IE 8]>
+	<!--[if lte IE 8]>
 	    <p class="browserupgrade">
 	    	You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
 	    </p>
@@ -44,7 +44,7 @@
 		</div>
 
 		<div class="notice--404">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="<?php _e( '404', 'cfree' ); ?>">
+			<a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="<?php _e( '404', 'cfree' ); ?>"></a>
 		</div>
 	</div>
 </div>

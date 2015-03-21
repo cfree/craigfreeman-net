@@ -141,6 +141,7 @@
 		color: $white;
 		line-height: 30px;
 		padding-right: 33px;
+		transition: background 0.3s;
 		width: 100%;
 
 		&:focus {
@@ -194,8 +195,13 @@
 	opacity: 0.5;
 	position: absolute;
 	right: $space;
+	transition: opacity 0.3s;
 	width: 87px;
 
+	&:hover {
+		opacity: 1;
+	}
+	
 	img {
 		height: auto;
 		width: 100%;
