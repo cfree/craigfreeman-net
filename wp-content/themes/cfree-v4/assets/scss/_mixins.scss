@@ -31,3 +31,44 @@
 		clear: both;
 	}
 }
+
+
+
+
+@mixin read-more($pseudo: after) {
+	$side: right;
+	$margin: 0 0 0 5px;
+	$content: '>';
+
+	@if ($pseudo == before) {
+		$side: left;
+		$margin: 0 5px 0 0;
+		$content: '<';
+	}
+
+	font-family: $font-headings;
+	font-size: 14px;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+
+	&:#{$pseudo} {
+		@include icon;
+		content: $content;
+		font-size: 9px;
+		font-size: 0.9rem;
+		margin: $margin;
+
+		position: relative;
+		#{$side}: 0;
+		transition: #{$side} 0.3s;
+	}
+
+	&:hover {
+		text-decoration: none;
+
+		&:#{$pseudo} {
+			#{$side}: -3px;
+		}
+	}
+}
+

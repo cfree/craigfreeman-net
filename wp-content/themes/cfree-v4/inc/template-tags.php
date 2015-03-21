@@ -82,17 +82,7 @@ function cfree_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'cfree' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
-
-	$byline = sprintf(
-		_x( 'by %s', 'post author', 'cfree' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
-
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+	echo '<span class="posted-on">' . $time_string . '</span>';
 
 }
 endif;
@@ -107,13 +97,13 @@ function cfree_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'cfree' ) );
 		if ( $categories_list && cfree_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'cfree' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . __( '%1$s', 'cfree' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'cfree' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'cfree' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( '%1$s', 'cfree' ) . '</span>', $tags_list );
 		}
 	}
 
@@ -264,3 +254,16 @@ function cfree_category_transient_flusher() {
 }
 add_action( 'edit_category', 'cfree_category_transient_flusher' );
 add_action( 'save_post',     'cfree_category_transient_flusher' );
+
+/**
+ * Custom read more
+ */
+function cfree_excerpt_more( $more ) {
+    global $post;
+    return '&hellip;';
+}
+add_filter( 'excerpt_more', 'cfree_excerpt_more' );
+
+
+
+

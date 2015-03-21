@@ -84,6 +84,10 @@
 	.nav-previous {
 		float: left;
 		width: 50%;
+
+		a {
+			@include read-more(before);
+		}
 	}
 }
 
@@ -94,6 +98,10 @@
 		float: right;
 		text-align: right;
 		width: 50%;
+
+		a {
+			@include read-more;
+		}
 	}
 }
 

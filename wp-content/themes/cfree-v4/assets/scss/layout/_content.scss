@@ -44,16 +44,13 @@
 	}
 }
 
+.post-excerpt {
+	@include clearfix;
+}
+
 .byline,
 .updated:not(.published) {
 	display: none;
-}
-
-.single,
-.group-blog {
-	.byline {
-		display: inline;
-	}
 }
 
 .entry-content,
@@ -61,9 +58,61 @@
 	margin: 1.5em 0 0;
 }
 
+.entry-meta {
+	@include span(2 of 9 first);
+	margin-top: 20px;
+	text-align: right;
+}
+
+.post__content {
+	@include span(7 at 3 of 9 last);
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.posted-on,
+.cat-links,
+.tags-links,
+.comments-link {
+	position: relative;
+	font-family: $font-headings;
+	font-size: 16px;
+	font-size: 1.6rem;
+	margin-right: 20px;
+	text-transform: uppercase;
+
+	&:before {
+		@include icon;
+		font-size: 20px;
+		font-size: 2rem;
+		margin-right: 7px;
+		position: relative;
+	}
+}
+
+.posted-on:before {
+	bottom: -2px;
+	content: 'y';
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+
+.cat-links:before {
+	bottom: -4px;
+	content: 'b';
+}
+
+.tags-links:before {
+	bottom: -4px;
+	content: 'w';
+}
+
+.comments-link:before {
+	bottom: -3px;
+	content: 'z';
 }
 
 
@@ -215,6 +264,16 @@
 // ------
 // Asides
 // ------
+
+.has-aside {
+	.blog__main {
+		@include span(9 at 1);
+	}
+
+	#secondary {
+		@include span(2 at 9);
+	}
+}
 
 .blog,
 .archive {
