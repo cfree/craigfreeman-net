@@ -37,7 +37,7 @@
 			<h1 class="heading--404"><?php _e( 'Uh oh&hellip;', 'cfree' ); ?></h1>
 			<h4 class="subheading--404"><?php _e( 'That page can\'t be found. Care to try again?', 'cfree' ); ?></h4>
 
-			<form class="search-form search-form--404" action="<?php echo home_url( '/' ); ?>">
+			<form class="search-form--404" action="<?php echo home_url( '/' ); ?>">
 				<input type="text" name="s">
 				<button class="search-button search-button--404"><?php _e( 'Search', 'cfree' ); ?></button>
 			</form>

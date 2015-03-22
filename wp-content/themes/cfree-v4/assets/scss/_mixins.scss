@@ -72,3 +72,39 @@
 	}
 }
 
+
+
+
+
+@mixin search-form {
+	border-bottom: 3px solid $gray-dark;
+	position: relative;
+	width: 100%;
+
+	@include breakpoint($break-small) {
+		width: 300px;
+	}
+
+	input[type="text"] {
+		@include appearance(none);
+		@include box-shadow(none);
+		@include border-radius(0);
+		background: $gray-light;
+		border: 0;
+		color: $gray-dark;
+		line-height: 30px;
+		padding-right: 33px;
+		width: 100%;
+
+		&:focus {
+			color: $gray-dark;
+			outline: none;
+			outline-style: none;
+		}
+	}
+
+	label {
+		display: none;
+	}
+}
+

@@ -177,66 +177,23 @@
 }
 
 .search-form--404 {
+	@include search-form;
 	border-bottom: 3px solid $white;
-	position: relative;
-	width: 100%;
-
-	@include breakpoint($break-small) {
-		width: 300px;
-	}
 
 	input[type="text"] {
-		@include appearance(none);
-		@include box-shadow(none);
-		@include border-radius(0);
 		background: rgba($white, 0.3);
-		border: 0;
 		color: $white;
-		line-height: 30px;
-		padding-right: 33px;
-		width: 100%;
 
 		&:focus {
 			color: $white;
-			outline: none;
-			outline-style: none;
 		}
 	}
-}
 
-.search-button--404 {
-	background: none;
-	border: none;
-	bottom: 3px;
-	height: 30px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	right: 0;
-	transition: none;
-	text-indent: -9999em;
-	width: 33px;
-
-	&:before {
-		@include icon;
-		background: transparent;
-		content: 'f';
-		display: block;
-		font-size: 22px;
-		font-size: 2.2rem;
-		height: 100%;
-		line-height: 30px;
-		text-align: center;
-		text-indent: 0;
-		width: 100%;
-	}
-
-	&:hover {
-		@include appearance(none);
-		@include box-shadow(none);
-		background: transparent;
-		border: none;
-		color: $white;
+	.search-button {
+		&:before,
+		&:hover {
+			color: $white;
+		}
 	}
 }
 
@@ -274,6 +231,11 @@
 
 	#secondary {
 		@include span(3 at 9 last);
+		margin-top: 20px;
+
+		.single-post & {
+			margin-top: 26px;
+		}
 	}
 }
 
