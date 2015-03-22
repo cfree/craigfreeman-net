@@ -71,3 +71,13 @@ textarea {
 	padding-left: 3px;
 	width: 100%;
 }
+
+input[type="submit"],
+button[type="submit"] {
+	@extend .button;
+	@extend .button--primary;
+	@include border-radius(0);
+	@include box-shadow(none);
+	@include appearance(none);
+}
+

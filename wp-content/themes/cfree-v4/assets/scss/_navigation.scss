@@ -81,6 +81,8 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
+	@include span(7 at 3 of 9);
+
 	.nav-previous {
 		float: left;
 		width: 50%;

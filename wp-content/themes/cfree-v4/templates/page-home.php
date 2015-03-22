@@ -90,36 +90,33 @@ get_header();
 			<h2><?php _e( 'Articles', 'cfree' ); ?></h2>
 
 			<div class="has-columns">
-				<article class="columns--three article-item">
-					<h3><a href="#">Text Article One</a></h3>
-					<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in... <a href="#" class="read-more"><?php _e( 'More', 'cfree' ); ?></a></p>
-				</article>
-				<article class="columns--three article-item">
-					<h3><a href="#">Text Article Two, now with two lines</a></h3>
-					<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in... <a href="#" class="read-more"><?php _e( 'More', 'cfree' ); ?></a></p>
-				</article>
-				<article class="columns--three article-item">
-					<h3><a href="#">Text Article Three</a></h3>
-					<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in... <a href="#" class="read-more"><?php _e( 'More', 'cfree' ); ?></a></p>
-				</article>
-				<article class="columns--three article-item">
-					<h3><a href="#">Text Article Four</a></h3>
-					<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in... <a href="#" class="read-more"><?php _e( 'More', 'cfree' ); ?></a></p>
-				</article>
-				<article class="columns--three article-item">
-					<h3><a href="#">Text Article Five</a></h3>
-					<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in... <a href="#" class="read-more"><?php _e( 'More', 'cfree' ); ?></a></p>
-				</article>
-				<article class="columns--three article-item">
-					<h3><a href="#">Text Article Six</a></h3>
-					<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in... <a href="#" class="read-more"><?php _e( 'More', 'cfree' ); ?></a></p>
-				</article>
+				<?php 
+					$article_args = array(
+						'posts_per_page' => 6
+					);
+
+					$article_query = new WP_Query( $article_args );
+
+					if ( $article_query->have_posts() ):
+						while ( $article_query->have_posts() ):
+							$article_query->the_post();
+				?>
+							<article class="columns--three article-item">
+								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+								<?php the_excerpt(); ?>
+							</article>
+				<?php
+						endwhile;
+						wp_reset_postdata();
+
+					endif;
+				?>
 			</div>
 
 			<hr>
 
 			<p>
-				<a href="#" class="alignright button button--primary--ghost"><?php _e( 'View All', 'cfree' ); ?></a>
+				<a href="<?php echo home_url( '/blog' ); ?>" class="alignright button button--primary--ghost"><?php _e( 'View All', 'cfree' ); ?></a>
 			</p>
 		</section>
 	</div><!-- #primary -->

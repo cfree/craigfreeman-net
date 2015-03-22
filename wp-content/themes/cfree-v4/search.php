@@ -6,40 +6,49 @@
  */
 
 get_header(); ?>
+<div id="content" class="site-content">
+	<div id="primary" class="content-area">
+		<section class="masthead masthead--typewriter">
+			<div class="container">
+				<h1 class="masthead__title has-subtitle"><?php _e( 'Search', 'cfree' ); ?></h1>
+				<h2 class="masthead__subtitle"><?php printf( __( 'Results For: %s', 'cfree' ), get_search_query() ); ?></h2>
+			</div>
+		</section>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main has-aside" role="main">
+			<div class="container">
+				<div class="blog__main">
 
-		<?php if ( have_posts() ) : ?>
+					<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'cfree' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+						<?php /* Start the Loop */ ?>
+						<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+							<?php
+							/**
+							 * Run the loop for the search to output the results.
+							 * If you want to overload this in a child theme then include a file
+							 * called content-search.php and that will be used instead.
+							 */
+							get_template_part( 'excerpt' );
+							?>
 
-				<?php
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'content', 'search' );
-				?>
+						<?php endwhile; ?>
 
-			<?php endwhile; ?>
+						<?php the_posts_navigation(); ?>
 
-			<?php the_posts_navigation(); ?>
+					<?php else : ?>
 
-		<?php else : ?>
+						<?php get_template_part( 'content', 'none' ); ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+					<?php endif; ?>
 
-		<?php endif; ?>
+				</div><!-- .blog__main -->
 
+				<?php get_sidebar(); ?>
+
+			</div><!-- .container -->
 		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
+	</div><!-- #primary -->
+</div>
 <?php get_footer(); ?>

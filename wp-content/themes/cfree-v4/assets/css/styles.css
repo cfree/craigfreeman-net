@@ -1147,6 +1147,9 @@ big {
   margin-top: 20px;
   text-align: right;
 }
+.single-post .entry-meta {
+  margin-top: 26px;
+}
 
 .post__content {
   width: 76.92308%;
@@ -1280,16 +1283,14 @@ big {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  background: none;
+  background: rgba(255, 255, 255, 0.3);
   border: 0;
   color: #FFF;
   line-height: 30px;
   padding-right: 33px;
-  transition: background 0.3s;
   width: 100%;
 }
 .search-form--404 input[type="text"]:focus {
-  background: rgba(255, 255, 255, 0.3);
   color: #FFF;
   outline: none;
   outline-style: none;
@@ -1363,14 +1364,20 @@ big {
   margin-right: 2.85714%;
 }
 .has-aside #secondary {
-  width: 14.28571%;
-  float: left;
-  margin-right: 2.85714%;
+  width: 22.85714%;
+  float: right;
+  margin-right: 0;
 }
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none;
+}
+
+.comments-area {
+  width: 76.92308%;
+  float: right;
+  margin-right: 0;
 }
 
 .comment-content a {
@@ -1379,6 +1386,41 @@ big {
 
 .bypostauthor {
   display: block;
+}
+
+.comment-list {
+  margin: 0 0 40px;
+  padding: 0;
+  text-align: justify;
+}
+.comment-list .children {
+  margin-top: 20px;
+}
+
+.comment + .comment {
+  margin: 20px 0 0;
+}
+
+.comment-author:before, .comment-author:after {
+  content: '';
+  display: table;
+}
+.comment-author:after {
+  clear: both;
+}
+.comment-author .avatar {
+  float: left;
+  height: 64px;
+  margin: 0 20px 20px 0;
+  width: 64px;
+}
+
+.comment-meta {
+  min-height: 64px;
+}
+.comment-meta .fn {
+  display: block;
+  padding-top: 10px;
 }
 
 .page-content .wp-smiley,
@@ -1547,6 +1589,13 @@ big {
   overflow: hidden;
 }
 
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+  width: 76.92308%;
+  float: right;
+  margin-right: 0;
+}
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
@@ -1775,6 +1824,18 @@ input[type="search"] {
 textarea {
   padding-left: 3px;
   width: 100%;
+}
+
+input[type="submit"],
+button[type="submit"] {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 .masthead {
@@ -2017,6 +2078,10 @@ textarea {
   margin: 20% 0 5%;
 }
 
+.article-item p {
+  text-align: justify;
+}
+
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
@@ -2093,7 +2158,8 @@ textarea {
   }
 }
 
-.button, .button--message, button {
+.button, input[type="submit"],
+button[type="submit"], .button--message, button {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -2107,19 +2173,24 @@ textarea {
   padding: 12px 16px 10px;
   text-transform: uppercase;
 }
-.button + .button, .button--message + .button, button + .button, .button + .button--message, .button--message + .button--message, button + .button--message, .button + button, .button--message + button, button + button {
+.button + .button, input[type="submit"] + .button,
+button[type="submit"] + .button, .button--message + .button, button + .button, .button + input[type="submit"], input[type="submit"] + input[type="submit"], .button--message + input[type="submit"], button + input[type="submit"],
+.button + button[type="submit"],
+button + button[type="submit"], .button + .button--message, input[type="submit"] + .button--message, .button--message + .button--message, button + .button--message, .button + button, input[type="submit"] + button,
+button[type="submit"] + button, .button--message + button, button + button {
   margin-left: 20px;
 }
-.button:hover, .button--message:hover, button:hover {
+.button:hover, input[type="submit"]:hover, .button--message:hover, button:hover {
   text-decoration: none;
 }
 
-.button--primary, button {
+.button--primary, input[type="submit"],
+button[type="submit"], button {
   background: #4D9ABE;
   border: 4px solid #4D9ABE;
   color: #FFF;
 }
-.button--primary:hover, button:hover {
+.button--primary:hover, input[type="submit"]:hover, button:hover {
   background: #FFF;
   border: 4px solid #4D9ABE;
   color: #4D9ABE;

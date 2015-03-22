@@ -47,6 +47,8 @@ if ( post_password_required() ) {
 				wp_list_comments( array(
 					'style'      => 'ol',
 					'short_ping' => true,
+					'callback' => 'cfree_custom_comments_layout',
+					'avatar_size' => 128,
 				) );
 			?>
 		</ol><!-- .comment-list -->
