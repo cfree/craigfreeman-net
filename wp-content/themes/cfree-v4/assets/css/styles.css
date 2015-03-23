@@ -1572,13 +1572,12 @@ big {
   }
 }
 .site-navigation .menu li:hover a:before, .site-navigation .menu li.current-menu-item a:before, .archive:not(.post-type-archive-portfolio) .site-navigation .menu li.current_page_parent a:before, .single-post .site-navigation .menu li.current_page_parent a:before, .single-portfolio .site-navigation .menu li.menu-item-object-custom a:before {
-  width: 4px;
+  max-width: 4px;
 }
 @media (min-width: 720px) {
   .site-navigation .menu li:hover a:before, .site-navigation .menu li.current-menu-item a:before, .archive:not(.post-type-archive-portfolio) .site-navigation .menu li.current_page_parent a:before, .single-post .site-navigation .menu li.current_page_parent a:before, .single-portfolio .site-navigation .menu li.menu-item-object-custom a:before {
     left: 0;
     max-width: 100%;
-    width: 100%;
   }
 }
 .site-navigation .menu a {
@@ -1604,18 +1603,18 @@ big {
   content: '';
   left: 0;
   height: 100%;
+  max-width: 0;
   position: absolute;
   top: 0;
-  width: 0;
+  transition: all 0.2s;
+  width: 100%;
 }
 @media (min-width: 720px) {
   .site-navigation .menu a:before {
     bottom: 0;
     left: 50%;
     height: 8px;
-    max-width: 0;
     top: auto;
-    transition: all 0.2s;
   }
 }
 .site-navigation .menu a:hover {

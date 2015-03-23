@@ -50,12 +50,11 @@
 			.single-portfolio &.menu-item-object-custom { // portfolio single
 				a {
 					&:before {
-						width: 4px;
+						max-width: 4px;
 
 						@include breakpoint($break-medium) {
 							left: 0;
 							max-width: 100%;
-							width: 100%;
 						}
 					}
 				}
@@ -84,17 +83,17 @@
 				content: '';
 				left: 0;
 				height: 100%;
+				max-width: 0;
 				position: absolute;
 				top: 0;
-				width: 0;
+				transition: all 0.2s;
+				width: 100%;
 
 				@include breakpoint($break-medium) {
 					bottom: 0;
 					left: 50%;
 					height: 8px;
-					max-width: 0;
 					top: auto;
-					transition: all 0.2s;
 				}
 			}
 
