@@ -2067,6 +2067,16 @@ button[type="submit"] {
   }
 }
 
+.portfolio__main {
+  margin-top: 10px;
+}
+.portfolio__main .posts-navigation {
+  width: 65.71429%;
+  float: left;
+  margin-left: 17.14286%;
+  margin-right: -100%;
+}
+
 .portfolio-item {
   position: relative;
 }

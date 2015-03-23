@@ -7,8 +7,15 @@
 
 define( 'CF_ASSETS_VERSION', '1.0.0' );
 
+/**
+ * Includes
+ */
 if ( file_exists( dirname( __FILE__ ) . '/plugins/CMB2/init.php' ) ) {
 	require_once dirname( __FILE__ ) . '/plugins/CMB2/init.php';
+}
+
+if ( file_exists( dirname( __FILE__ ) . '/inc/custom_data.php' ) ) {
+	require_once dirname( __FILE__ ) . '/inc/custom_data.php';
 }
 
 /**
@@ -52,7 +59,7 @@ function cfree_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -80,6 +87,11 @@ function cfree_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	/*
+	 * Add custom image sizes
+	 */
+	add_image_size( 'portfolio', 736, 490 );
 }
 endif; // cfree_setup
 add_action( 'after_setup_theme', 'cfree_setup' );

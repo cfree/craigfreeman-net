@@ -50,31 +50,27 @@ get_header();
 			<h2><?php _e( 'Portfolio', 'cfree' ); ?></h2>
 			
 			<div class="has-columns">
-				<article class="columns--three portfolio-item">
-					<div class="portfolio-item__content">
-						<h3>Portfolio Item One</h3>
-						<a href="#" class="button button--primary"><?php _e( 'View', 'cfree' ); ?></a>
-					</div>
-					<img src="http://placekitten.com/g/375/250">
-				</article>
-				<article class="columns--three portfolio-item">
-					<div class="portfolio-item__content">
-						<h3>Portfolio Item Two, now with two lines</h3>
-						<a href="#" class="button button--primary">View</a>
-					</div>
-					<img src="http://placekitten.com/g/375/250">
-				</article>
-				<article class="columns--three portfolio-item">
-					<div class="portfolio-item__content">
-						<h3>Portfolio Item Three</h3>
-						<a href="#" class="button button--primary">View</a>
-					</div>
-					<img src="http://placekitten.com/g/375/250">
-				</article>
+				<?php 
+					$portfolio_args = array(
+						'posts_per_page' => 3,
+						'post_type' => 'portfolio',
+					);
+
+					$portfolio_query = new WP_Query( $portfolio_args );
+
+					if ( $portfolio_query->have_posts() ):
+						while ( $portfolio_query->have_posts() ):
+							$portfolio_query->the_post();
+							get_template_part( 'excerpt', 'portfolio' );
+						endwhile;
+						wp_reset_postdata();
+
+					endif;
+				?>
 			</div>
 
 			<p>
-				<a href="#" class="alignright button button--primary--ghost"><?php _e( 'View All', 'cfree' ); ?></a>
+				<a href="<?php echo home_url( '/portfolio/' ) ?>" class="alignright button button--primary--ghost"><?php _e( 'View All', 'cfree' ); ?></a>
 			</p>
 		</section>
 
@@ -92,7 +88,7 @@ get_header();
 			<div class="has-columns">
 				<?php 
 					$article_args = array(
-						'posts_per_page' => 6
+						'posts_per_page' => 3,
 					);
 
 					$article_query = new WP_Query( $article_args );
