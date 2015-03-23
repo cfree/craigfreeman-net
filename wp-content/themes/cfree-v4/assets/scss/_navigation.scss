@@ -25,8 +25,10 @@
 			padding: 0;
 
 			&:hover,
-			&.current-menu-item,
-			&.current_page_parent {
+			&.current-menu-item, // page, portfolio archive, blog archive
+			.archive:not(.post-type-archive-portfolio)  &.current_page_parent, // archives
+			.single-post &.current_page_parent, // blog single
+			.single-portfolio &.menu-item-object-custom { // portfolio single
 				a {
 					text-decoration: none;
 

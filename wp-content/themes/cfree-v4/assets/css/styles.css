@@ -1528,10 +1528,10 @@ big {
   margin: 0 0 0 20px;
   padding: 0;
 }
-.site-navigation .menu li:hover a, .site-navigation .menu li.current-menu-item a, .site-navigation .menu li.current_page_parent a {
+.site-navigation .menu li:hover a, .site-navigation .menu li.current-menu-item a, .archive:not(.post-type-archive-portfolio) .site-navigation .menu li.current_page_parent a, .single-post .site-navigation .menu li.current_page_parent a, .single-portfolio .site-navigation .menu li.menu-item-object-custom a {
   text-decoration: none;
 }
-.site-navigation .menu li:hover a:before, .site-navigation .menu li.current-menu-item a:before, .site-navigation .menu li.current_page_parent a:before {
+.site-navigation .menu li:hover a:before, .site-navigation .menu li.current-menu-item a:before, .archive:not(.post-type-archive-portfolio) .site-navigation .menu li.current_page_parent a:before, .single-post .site-navigation .menu li.current_page_parent a:before, .single-portfolio .site-navigation .menu li.menu-item-object-custom a:before {
   left: 0;
   max-width: 100%;
 }
