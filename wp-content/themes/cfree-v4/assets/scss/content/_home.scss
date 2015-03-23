@@ -12,6 +12,10 @@
 	@include breakpoint($break-medium) {
 		@include span(isolate 8 at 3);
 	}
+
+	.hentry {
+		margin-bottom: 1.5em;
+	}
 }
 
 .home__breakdown--stack {
