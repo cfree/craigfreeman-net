@@ -2039,7 +2039,6 @@ button[type="submit"] {
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
-  height: 250px;
   margin-bottom: 1em;
   position: relative;
 }
@@ -2070,43 +2069,61 @@ button[type="submit"] {
 .masthead__title {
   color: #FFF;
   font-family: "effra", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 80px;
-  font-size: 8rem;
+  font-size: 40px;
+  font-size: 4rem;
   line-height: 1.2;
-  margin: 2em auto 0;
+  margin: 0.5em auto;
   position: relative;
   text-align: center;
   text-shadow: 3px 3px #3D4C53;
   text-transform: uppercase;
-  width: 70%;
 }
-.masthead__title.has-subtitle {
-  margin-top: 1.65em;
-}
-
-@media (min-width: 960px) {
-  .masthead__title--two-lines {
-    margin-top: 1.35em;
+@media (min-width: 720px) {
+  .masthead__title {
+    font-size: 80px;
+    font-size: 8rem;
+    margin: 2em auto 0;
+    width: 70%;
   }
 }
-@media (min-width: 1800px) {
-  .masthead__title--two-lines {
-    margin-top: 35%;
+@media (min-width: 960px) {
+  .masthead__title {
+    margin-top: 3em;
+  }
+}
+.masthead__title.has-subtitle {
+  margin-bottom: 0;
+}
+@media (min-width: 720px) {
+  .masthead__title.has-subtitle {
+    margin-top: 1.65em;
+  }
+}
+@media (min-width: 960px) {
+  .masthead__title.has-subtitle {
+    margin-top: 2.65em;
   }
 }
 
 .masthead__subtitle {
   color: #FFF;
   font-family: "effra", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 40px;
-  font-size: 4rem;
+  font-size: 20px;
+  font-size: 2rem;
   line-height: 1;
-  margin: 0.2em auto 0;
+  margin: 0 auto 1em;
   position: relative;
   text-align: center;
   text-shadow: 2px 2px #3D4C53;
   text-transform: uppercase;
-  width: 80%;
+}
+@media (min-width: 720px) {
+  .masthead__subtitle {
+    font-size: 40px;
+    font-size: 4rem;
+    margin: 0.2em auto 0;
+    width: 80%;
+  }
 }
 
 .masthead--typewriter {

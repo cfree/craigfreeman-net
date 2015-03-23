@@ -7,7 +7,6 @@
 	background-color: transparent;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 250px;
 	margin-bottom: 1em;
 	position: relative;
 
@@ -38,43 +37,57 @@
 .masthead__title {
 	color: $white;
 	font-family: $font-headings;
-	font-size: 80px;
-	font-size: 8rem;
+	font-size: 40px;
+	font-size: 4rem;
 	line-height: 1.2;
-	margin: 2em auto 0;
+	margin: 0.5em auto;
 	position: relative;
 	text-align: center;
 	text-shadow: 3px 3px $gray-dark;
 	text-transform: uppercase;
-	width: 70%;
-
-	&.has-subtitle {
-		margin-top: 1.65em;
+	
+	@include breakpoint($break-medium) {
+		font-size: 80px;
+		font-size: 8rem;
+		margin: 2em auto 0;
+		width: 70%;
 	}
-}
-
-.masthead__title--two-lines {
 
 	@include breakpoint($break-large) {
-		margin-top: 1.35em;
+		margin-top: 3em;
 	}
-	@include breakpoint($break-xl) {
-		margin-top: 35%;
+
+	&.has-subtitle {
+		margin-bottom: 0;
+
+		@include breakpoint($break-medium) {
+			margin-top: 1.65em;
+		}
+
+		@include breakpoint($break-large) {
+			margin-top: 2.65em;
+		}
 	}
 }
 
 .masthead__subtitle {
 	color: $white;
 	font-family: $font-headings;
-	font-size: 40px;
-	font-size: 4rem;
+	font-size: 20px;
+	font-size: 2rem;
 	line-height: 1;
-	margin: 0.2em auto 0;
+	margin: 0 auto 1em;
 	position: relative;
 	text-align: center;
 	text-shadow: 2px 2px $gray-dark;
 	text-transform: uppercase;
-	width: 80%;
+
+	@include breakpoint($break-medium) {
+		font-size: 40px;
+		font-size: 4rem;
+		margin: 0.2em auto 0;
+		width: 80%;
+	}
 }
 
 .masthead--typewriter {
