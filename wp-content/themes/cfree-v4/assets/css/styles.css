@@ -1464,6 +1464,7 @@ big {
   font-family: "effra", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-size: 1.8rem;
+  margin-top: 0;
   text-transform: uppercase;
 }
 
@@ -2166,6 +2167,11 @@ button[type="submit"] {
 
 .widget select {
   max-width: 100%;
+}
+@media (min-width: 720px) {
+  .widget select {
+    width: 100%;
+  }
 }
 
 .widget_search .search-submit {

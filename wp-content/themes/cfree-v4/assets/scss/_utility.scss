@@ -81,6 +81,10 @@
 // Make sure select elements fit in widgets.
 .widget select {
 	max-width: 100%;
+
+	@include breakpoint($break-medium) {
+		width: 100%;
+	}
 }
 
 // Search widget
