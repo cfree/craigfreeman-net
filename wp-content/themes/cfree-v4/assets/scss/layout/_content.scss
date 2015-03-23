@@ -4,7 +4,10 @@
 
 .site-content {
 	background: $gray-dark;
-	padding-top: $content-vertical-padding;
+
+	@include breakpoint($break-medium) {
+		padding-top: $content-vertical-padding;
+	}
 }
 
 .content-area {

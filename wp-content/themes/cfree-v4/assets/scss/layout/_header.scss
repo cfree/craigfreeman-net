@@ -3,15 +3,17 @@
 //------------------------------------------------
 
 .site-header {
-	@include border-radius(0 2px 2px $gray-dark);
 	background: $gray-dark;
-	left: 0;
-	max-height: 110px;
-	position: fixed;
-	right: 0;
-	top: 0;
-	transition: max-height 0.3s;
-	z-index: 100;
+
+	@include breakpoint($break-medium) {
+		left: 0;
+		max-height: $content-vertical-padding;
+		position: fixed;
+		right: 0;
+		top: 0;
+		transition: max-height 0.3s;
+		z-index: 100;	
+	}
 
 	&.is-fixed {
 		max-height: 70px;
@@ -34,7 +36,11 @@
 	@include clearfix;
 	font-size: 18px;
 	font-size: 1.8rem;
-	margin: 15px 0;
+	margin: 10px 0;
+
+	@include breakpoint($break-medium) {
+		margin: 15px 0;
+	}
 
 	.is-fixed & {
 		margin: 10px 0;
@@ -47,10 +53,14 @@
 
 .site-title__logo {
 	height: auto;
-	max-height: 80px;
+	max-height: 40px;
 	max-width: 100%;
 	transition: max-height 0.3s;
 	vertical-align: middle;
+
+	@include breakpoint($break-medium) {
+		max-height: 80px;
+	}
 
 	.is-fixed & {
 		margin: 0;

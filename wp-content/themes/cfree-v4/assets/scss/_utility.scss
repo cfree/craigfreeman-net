@@ -273,7 +273,7 @@
 // Forms
 // -----
 
-button {
+form button {
 	@include box-shadow(none);
 	@include border-radius(0);
 	@extend .button;

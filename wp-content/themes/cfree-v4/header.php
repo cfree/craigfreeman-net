@@ -41,22 +41,20 @@
 					</a>
 				</h2>
 			</div><!-- .site-branding -->
-
-			<ul class="site-header__social">
-				<li><a class="site-social site-social--twitter" title="Twitter" href="https://twitter.com/craigfreeman" target="_blank"><?php _e( 'Twitter', 'cfree' ); ?></a></li>
-				<li><a class="site-social site-social--linkedin" title="LinkedIn" href="https://linkedin.com/in/cfree" target="_blank"><?php _e( 'LinkedIn', 'cfree' ); ?></a></li>
-				<li><a class="site-social site-social--meetup" title="Denver Code Club" href="http://meetup.com/denver-code-club" target="_blank"><?php _e( 'Denver Code Club', 'cfree' ); ?></a></li>
-				<li><a class="site-social site-social--message js-message" title="Message Me" href="#message" data-addr="craigfreeman@gmail.com" target="_blank"><?php _e( 'Message Me', 'cfree' ); ?></a></li>
-			</ul>
-
+			<button class="menu-toggle js-menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Menu', 'cfree' ); ?></button>
 			<nav class="site-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'cfree' ); ?></button>
 				<?php 
 					wp_nav_menu( array( 
 						'theme_location' => 'primary',
 						'menu_id' => 'primary-menu',
 					) );
 				?>
+				<ul class="site-header__social">
+					<li><a class="site-social site-social--twitter" title="Twitter" href="https://twitter.com/craigfreeman" target="_blank"><?php _e( 'Twitter', 'cfree' ); ?></a></li>
+					<li><a class="site-social site-social--linkedin" title="LinkedIn" href="https://linkedin.com/in/cfree" target="_blank"><?php _e( 'LinkedIn', 'cfree' ); ?></a></li>
+					<li><a class="site-social site-social--meetup" title="Denver Code Club" href="http://meetup.com/denver-code-club" target="_blank"><?php _e( 'Denver Code Club', 'cfree' ); ?></a></li>
+					<li><a class="site-social site-social--message js-message" title="Message Me" href="#message" data-addr="craigfreeman@gmail.com" target="_blank"><?php _e( 'Message Me', 'cfree' ); ?></a></li>
+				</ul>
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- .site-header -->

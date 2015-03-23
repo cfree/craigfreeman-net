@@ -92,15 +92,21 @@
 		CFree.init();
 	})
 	.on('click', '.js-message', function(e) {
+		// Robot-avoidant mailto
 		var $this = $(this),
 			addr = $this.attr('data-addr');
 
 		$this.attr('href', 'mailto:' + addr);
 	})
 	.on('click', '.js-scroll-up', function() {
+		// Scroll up to the top
 		$.animate({
 			scrollTop: $(this).offset().top
 		}, 1000);
+	})
+	.on('click', '.js-menu-toggle', function(e) {
+		// e.preventDefault();
+		$(this).add('.site-navigation').toggleClass('active');
 	});
 
 })(jQuery);
