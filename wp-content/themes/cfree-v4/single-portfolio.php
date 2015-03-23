@@ -17,10 +17,10 @@ get_header(); ?>
 		</section>
 
 		<main id="main" class="site-main container" role="main">
-			<div class="page-content">
+			<div class="portfolio-content">
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+					<?php get_template_part( 'content', 'single-portfolio' ); ?>
 
 					<?php the_post_navigation(); ?>
 

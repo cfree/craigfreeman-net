@@ -2078,6 +2078,20 @@ button[type="submit"] {
   margin-right: -100%;
 }
 
+.portfolio-content {
+  width: 65.71429%;
+  float: left;
+  margin-left: 17.14286%;
+  margin-right: -100%;
+  text-align: justify;
+}
+.portfolio-content .post-navigation {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .portfolio-item {
   position: relative;
 }

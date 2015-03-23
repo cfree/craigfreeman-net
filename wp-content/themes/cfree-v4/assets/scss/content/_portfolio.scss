@@ -10,6 +10,15 @@
 	}
 }
 
+.portfolio-content {
+	@include span(isolate 8 at 3);
+	text-align: justify;
+
+	.post-navigation {
+		@include span(full);
+	}
+}
+
 
 
 
