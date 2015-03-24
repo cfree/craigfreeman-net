@@ -1,0 +1,134 @@
+//------------------------------------------------
+// Mastheads
+//------------------------------------------------
+
+.masthead {
+	@include background-size(cover);
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+
+	body:not(.home) & {
+		margin-bottom: 1em;
+	}
+
+	@include breakpoint($break-medium) {
+		height: 400px;
+	}
+
+	@include breakpoint($break-xl) {
+		height: 600px;
+		
+		body:not(.home) & {
+			margin-bottom: 3em;
+		}
+
+	}
+
+	&:before {
+		background: $primary;
+		content: '';
+		height: 100%;
+		opacity: 0.5;
+		position: absolute;
+		width: 100%;
+	}
+
+	.container {
+		height: 100%;
+		position: relative;
+	}
+}
+
+.masthead__title {
+	color: $white;
+	font-family: $font-headings;
+	font-size: 30px;
+	font-size: 3rem;
+	line-height: 1.2;
+	margin: 1em auto;
+	position: relative;
+	text-align: center;
+	text-shadow: 3px 3px $gray-dark;
+	text-transform: uppercase;
+	
+	@include breakpoint($break-small) {
+		font-size: 40px;
+		font-size: 4rem;
+	}
+
+	@include breakpoint($break-medium) {
+		font-size: 80px;
+		font-size: 8rem;
+		margin: 2em auto 0;
+		width: 90%;
+	}
+
+	@include breakpoint($break-large) {
+		font-size: 80px;
+		font-size: 8rem;
+		margin: 2em auto 0;
+		width: 70%;
+	}
+
+	@include breakpoint($break-xl) {
+		margin-top: 3em;
+	}
+
+	&.has-subtitle {
+		margin-bottom: 0;
+
+		@include breakpoint($break-medium) {
+			margin-top: 1.65em;
+		}
+
+		@include breakpoint($break-xl) {
+			margin-top: 2.65em;
+		}
+	}
+}
+
+.masthead__subtitle {
+	color: $white;
+	font-family: $font-headings;
+	font-size: 20px;
+	font-size: 2rem;
+	line-height: 1;
+	margin: 0 auto 1.8em;
+	position: relative;
+	text-align: center;
+	text-shadow: 2px 2px $gray-dark;
+	text-transform: uppercase;
+
+	@include breakpoint($break-medium) {
+		font-size: 40px;
+		font-size: 4rem;
+		margin: 0.2em auto 0;
+		width: 80%;
+	}
+}
+
+.masthead--mountains {
+	background-image: url('../img/heroes/mountains.jpg');
+}
+
+.masthead--build {
+	background-image: url('../img/heroes/build.jpg');
+}
+
+.masthead--code {
+	background-image: url('../img/heroes/code.jpg');
+}
+
+.masthead--notes {
+	background-image: url('../img/heroes/notes.jpg');
+}
+
+.masthead--spyglass {
+	background-image: url('../img/heroes/spyglass.jpg');
+}
+
+.masthead--typewriter {
+	background-image: url('../img/heroes/typewriter.jpg');
+}

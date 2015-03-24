@@ -1,0 +1,322 @@
+//------------------------------------------------
+// Navigation
+//------------------------------------------------
+
+.site-navigation {
+	@include clearfix;
+	clear: both;
+	margin: 0 -10px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.4s;
+
+	&.active {
+		max-height: 2000px;
+	}
+
+	@include breakpoint($break-medium) {
+		@include span(9 of 12 last);
+		clear: none;
+		display: block;
+		height: 100%;
+		margin: 0;
+		max-height: 200px;
+	}
+	
+	.menu {
+		@include clearfix;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		@include breakpoint($break-medium) {
+			bottom: 0;
+			position: absolute;
+			right: 15px;			
+		}
+
+		li {
+			padding: 0;
+
+			@include breakpoint($break-medium) {
+				display: inline-block;
+				margin: 0 0 0 $space;
+			}
+
+			&:hover,
+			&.current-menu-item, // page, portfolio archive, blog archive
+			.archive:not(.post-type-archive-portfolio)  &.current_page_parent, // archives
+			.single-post &.current_page_parent, // blog single
+			.single-portfolio &.menu-item-object-custom { // portfolio single
+				a {
+					&:before {
+						max-width: 4px;
+
+						@include breakpoint($break-medium) {
+							left: 0;
+							max-width: 100%;
+						}
+					}
+				}
+			}
+		}
+
+		a {
+			color: $white;
+			display: block;
+			font-family: $font-headings;
+			font-size: 16px;
+			font-size: 1.6rem;
+			letter-spacing: 1px;
+			padding: ($space * 0.5) ($space * 0.5);
+			position: relative;
+			text-transform: uppercase;
+
+			@include breakpoint($break-medium) {
+				font-size: 20px;
+				font-size: 2rem;
+				padding: $space 0;
+			}
+
+			&:before {
+				background: $secondary;
+				content: '';
+				left: 0;
+				height: 100%;
+				max-width: 0;
+				position: absolute;
+				top: 0;
+				transition: all 0.2s;
+				width: 100%;
+
+				@include breakpoint($break-medium) {
+					bottom: 0;
+					left: 50%;
+					height: 8px;
+					top: auto;
+				}
+			}
+
+			&:hover {
+				text-decoration: none;				
+			}
+		}
+	}
+}
+
+// Small menu
+.menu-toggle {
+	background: transparent;
+	border: none;
+	height: 40px;
+	overflow: hidden;
+	position: absolute;
+	right: 10px;
+	text-indent: -9999em;
+	top: 10px;
+	width: 40px;
+
+	&:before,
+	&:after {
+		@include icon;
+		@include transform(rotate(0));
+		color: $white;
+		display: block;
+		height: 100%;
+		left: 0;
+		line-height: 40px;
+		opacity: 1;
+		position: absolute;
+		text-align: center;
+		text-indent: 0;
+		top: 0;
+		transition: opacity 0.2s, transform 0.2s;
+		width: 100%;
+	}
+
+	&:before {
+		content: 'h';
+		font-size: 24px;
+		font-size: 2.4rem;
+	}
+
+	&:after {
+		@include transform(rotate(45deg));
+		content: 'x';
+		font-size: 16px;
+		font-size: 1.6rem;
+		opacity: 0;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&.active {
+		&:before {
+			@include transform(rotate(45deg));
+			opacity: 0;
+		}
+
+		&:after {
+			@include transform(rotate(0));
+			opacity: 1;
+		}
+	}
+
+	@include breakpoint($break-medium) {
+		display: none;
+	}
+}
+
+.site-main {
+	.comment-navigation,
+	.posts-navigation,
+	.post-navigation {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	@include span(full);
+
+	@include breakpoint($break-large) {
+		@include span(7 at 3 of 9);
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+
+		a {
+			@include read-more(before);
+		}
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+
+		a {
+			@include read-more;
+		}
+	}
+}
+
+// Social
+.site-header__social {
+	@include clearfix;
+	list-style: none;
+	margin: 0 0 10px;
+	padding: 0;
+
+	@include breakpoint($break-medium) {
+		float: right;
+		margin: $space 0 0;
+	}
+
+	.is-fixed & {
+		display: none;
+	}
+
+	li {
+		float: left;
+		margin: 0 0 0 10px;
+		padding: 0;
+
+		@include breakpoint($break-medium) {
+			margin: 0 0 0 $space;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.site-social {
+	display: block;
+	height: 30px;
+	overflow: hidden;
+	text-indent: -9999em;
+	width: 30px;
+
+	&:before {
+		@include transition(color 0.2s);
+		@include icon;
+		color: $gray-light;
+		display: block;
+		font-size: 24px;
+		line-height: 30px;
+		text-align: center;
+		text-indent: 0;
+
+		@include breakpoint($break-medium) {
+			font-size: 30px;
+			line-height: 30px;
+		}
+	}
+
+	&:hover {
+		text-decoration: none;
+
+		&:before {
+			color: $secondary;
+		}
+	}
+}
+
+.site-social--twitter {
+	&:before {
+		content: 't';
+	}
+}
+
+.site-social--github {
+	&:before {
+		content: 'g';
+		font-size: 26px;
+
+		@include breakpoint($break-medium) {
+			font-size: 28px;
+		}
+	}
+}
+
+.site-social--linkedin {
+	&:before {
+		content: 'l';
+	}
+}
+
+.site-social--meetup {
+	&:before {
+		content: 'k';
+		font-size: 33px;
+		line-height: 33px;
+
+		@include breakpoint($break-medium) {
+			font-size: 35px;
+			line-height: 32px;
+		}
+	}
+}
+
+.site-social--message {
+	&:before {
+		content: 'e';
+		font-size: 23px;
+
+		@include breakpoint($break-medium) {
+			font-size: 27px;
+		}
+	}
+}

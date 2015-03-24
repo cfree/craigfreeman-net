@@ -1,0 +1,68 @@
+//------------------------------------------------
+// Content - Portfolio
+//------------------------------------------------
+
+.portfolio__main {
+	margin-top: 10px;
+
+	.posts-navigation {
+		@include span(isolate 8 at 3);
+	}
+}
+
+.portfolio-content {
+	@include span(isolate 8 at 3);
+
+	.post-navigation {
+		@include span(full);
+	}
+}
+
+
+
+
+
+// ---------------
+// Portfolio Items
+// ---------------
+
+.portfolio-item {
+	@include clearfix;
+	border: 2px solid $gray-light;
+	position: relative;
+	max-width: 368px;
+
+	@include breakpoint($break-medium) {
+		&:hover .portfolio-item__content {
+			opacity: 1;
+		}
+	}
+	
+	img {
+		float: left;
+		height: auto;
+		width: 100%;
+	}
+}
+
+.portfolio-item__content {
+	background: rgba($gray-light, 0.8);
+	height: 100%;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+
+	@include breakpoint($break-medium) {
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+
+	h3 {
+		margin: 20% 0 5%;
+
+		@include breakpoint(($break-xl - 1), max) {
+			font-size: 22px;
+			font-size: 2.2rem;
+		}
+	}
+}

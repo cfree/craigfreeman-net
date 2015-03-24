@@ -1,0 +1,13 @@
+//------------------------------------------------
+// Structure
+//------------------------------------------------
+
+.container {
+	@include clearfix;
+	@include container;
+	padding: 0 ($space * 0.5);
+
+	@include breakpoint($break-medium) {
+		padding: 0 ($space * 0.75);
+	}
+}
