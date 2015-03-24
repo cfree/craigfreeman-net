@@ -41,7 +41,7 @@ get_header();
 				</div>
 				<div class="home__breakdown--back">
 					<h2><?php _e( 'Back-End', 'cfree' ); ?></h2>
-					<p><?php _e( 'Whether writing routes for API endpoints, leveraging an ORM, or manually retrieving data from MySQL and MongoDB, my experience with object-oriented PHP frameworks, such as Laravel, and Node.js gives me a clear perspective on how to best provide data to the front-end.', 'cfree' ); ?></p>
+					<p><?php _e( 'Whether writing routes for API endpoints, leveraging an ORM, or manually retrieving data from MySQL and MongoDB, my experience with Node.js and object-oriented PHP frameworks, such as Laravel, gives me a clear perspective on how to best provide data to the front-end.', 'cfree' ); ?></p>
 				</div>
 			</div><!-- .container -->
 		</section>
