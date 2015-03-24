@@ -265,7 +265,7 @@ function cfree_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'cfree_excerpt_more' );
 
 /**
- * 
+ * Custom comments layout
  */
 function cfree_custom_comments_layout( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
@@ -313,3 +313,23 @@ function cfree_custom_comments_layout( $comment, $args, $depth ) {
 		<?php endif; ?>
 	<?php
 }
+
+/**
+ * Show proper hero image
+ */
+function cfree_hero( $slug ) {
+	$class = 'masthead--';
+
+	switch( $slug ) {
+		case 'about':
+			$class .= 'mountains';
+			break;
+		case 'resume':
+			$class .= 'notes';
+			break;
+		default: $class .= 'typewriter';
+	}
+
+	echo $class;
+}
+

@@ -8,7 +8,7 @@
 get_header(); ?>
 <div id="content" class="site-content">
 	<div id="primary" class="content-area">
-		<section class="masthead masthead--typewriter">
+		<section class="masthead masthead--spyglass">
 			<div class="container">
 				<h1 class="masthead__title has-subtitle"><?php _e( 'Search', 'cfree' ); ?></h1>
 				<h2 class="masthead__subtitle"><?php printf( __( 'Results For: %s', 'cfree' ), get_search_query() ); ?></h2>

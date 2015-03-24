@@ -2170,6 +2170,26 @@ body:not(.home) .masthead {
   }
 }
 
+.masthead--mountains {
+  background-image: url("../img/heroes/mountains.jpg");
+}
+
+.masthead--build {
+  background-image: url("../img/heroes/build.jpg");
+}
+
+.masthead--code {
+  background-image: url("../img/heroes/code.jpg");
+}
+
+.masthead--notes {
+  background-image: url("../img/heroes/notes.jpg");
+}
+
+.masthead--spyglass {
+  background-image: url("../img/heroes/spyglass.jpg");
+}
+
 .masthead--typewriter {
   background-image: url("../img/heroes/typewriter.jpg");
 }

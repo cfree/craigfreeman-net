@@ -10,7 +10,7 @@
 get_header(); ?>
 <div id="content" class="site-content">
 	<div id="primary" class="content-area">
-		<section class="masthead masthead--typewriter">
+		<section class="masthead masthead--code">
 			<div class="container">
 				<h1 class="masthead__title"><?php _e( 'Portfolio', 'cfree' ); ?></h1>
 			</div>
