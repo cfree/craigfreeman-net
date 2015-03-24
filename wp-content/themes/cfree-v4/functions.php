@@ -161,3 +161,32 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Legacy Filters
+ */
+//Add URL shortcode
+function blogURL() {
+        $href = get_bloginfo( 'url' );
+        return $href;
+}
+
+add_shortcode( 'url', 'blogURL' );
+
+//Replace the "[url]" shortcode with the working URL in the editor
+function replaceURL_Shortcode($content) {
+        $href = get_bloginfo( 'url' );
+        $content = str_ireplace('[url]', $href, $content);
+        return $content;
+}
+
+add_filter( 'the_editor_content', 'replaceURL_Shortcode' );
+
+//Translate the working URL into the "[url]" shortcode to be saved in the DB
+function insert_Shortcode($content) {
+        $href = get_bloginfo( 'url' );
+        $content = str_ireplace($href, '[url]', $content);
+        return $content;
+}
+
+add_filter( 'content_save_pre', 'insert_Shortcode' );
