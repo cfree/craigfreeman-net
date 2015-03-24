@@ -280,6 +280,17 @@
 	}
 }
 
+.site-social--github {
+	&:before {
+		content: 'g';
+		font-size: 26px;
+
+		@include breakpoint($break-medium) {
+			font-size: 28px;
+		}
+	}
+}
+
 .site-social--linkedin {
 	&:before {
 		content: 'l';

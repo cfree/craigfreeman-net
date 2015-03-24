@@ -28,6 +28,7 @@
 
 .portfolio-item {
 	@include clearfix;
+	border: 2px solid $gray-light;
 	position: relative;
 	max-width: 368px;
 
@@ -45,7 +46,7 @@
 }
 
 .portfolio-item__content {
-	background: rgba($gray-light, 0.7);
+	background: rgba($gray-light, 0.8);
 	height: 100%;
 	position: absolute;
 	text-align: center;

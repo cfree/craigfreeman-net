@@ -33,15 +33,15 @@ get_header();
 			<div class="container">
 				<div class="home__breakdown--design">
 					<h2><?php _e( 'Design', 'cfree' ); ?></h2>
-					<p><?php _e( 'My graphic media background has instilled in me an eye for design, rhythm, and cleanliness. I’m an advocate for consistent designs and I appreciate intuitive user interfaces, both of which lend themselves to an enjoyable user experience. My graphics editor skills allow me to make revisions to design mockups and wireframes where needed.', 'cfree' ); ?></p>
+					<p><?php _e( 'My graphic media background has instilled in me an eye for design, rhythm, and cleanliness. I’m an advocate for consistent themes and I appreciate intuitive interfaces, both of which lend themselves to an enjoyable user experience. As needed, I am able to make revisions to design mockups and wireframes.', 'cfree' ); ?></p>
 				</div>
 				<div class="home__breakdown--front">
 					<h2><?php _e( 'Front-End', 'cfree' ); ?></h2>
-					<p><?php _e( 'I create progressively-enhanced web sites and single-page applications by adhering to the <a href="http://cssguidelin.es/" target="_blank" rel="nofollow">CSS Guidelines</a>. My scalable Sass styles, object-oriented JavaScript and application of <a href="http://www.lukew.com/resources/mobile_first.asp" target="_blank" rel="nofollow">Mobile First</a> responsive web design principles marries data with design for optimized communication. This positions me perfectly as the bridge between design and the back-end.', 'cfree' ); ?></p>
+					<p><?php _e( 'I create progressively-enhanced web sites and single-page applications by adhering to the <a href="http://cssguidelin.es/" target="_blank" rel="nofollow">CSS Guidelines</a>. My scalable Sass styles, object-oriented JavaScript and application of responsive web design principles marries data with design for optimized communication. This positions me as a seemless bridge between design and the back-end.', 'cfree' ); ?></p>
 				</div>
 				<div class="home__breakdown--back">
 					<h2><?php _e( 'Back-End', 'cfree' ); ?></h2>
-					<p><?php _e( 'Whether writing routes for API endpoints, leveraging an ORM, or manually retrieving data from MySQL and MongoDB, my experience with Node.js and object-oriented PHP frameworks, such as Laravel, gives me a clear perspective on how to best provide data to the front-end.', 'cfree' ); ?></p>
+					<p><?php _e( 'Whether writing routes for API endpoints, leveraging an ORM, or manually retrieving data from MySQL, my experience with Node.js and MVC frameworks, such as Laravel, gives me a clear perspective on how to best provide data to the front-end.', 'cfree' ); ?></p>
 				</div>
 			</div><!-- .container -->
 		</section>
