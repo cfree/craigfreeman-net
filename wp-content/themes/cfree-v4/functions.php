@@ -22,7 +22,7 @@ if ( file_exists( dirname( __FILE__ ) . '/inc/custom_data.php' ) ) {
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
+	$content_width = 1200; /* pixels */
 }
 
 if ( ! function_exists( 'cfree_setup' ) ) :
