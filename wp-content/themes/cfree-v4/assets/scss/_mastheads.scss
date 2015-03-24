@@ -7,11 +7,11 @@
 	background-color: transparent;
 	background-position: center;
 	background-repeat: no-repeat;
-	margin-bottom: 1em;
 	position: relative;
 
 	@include breakpoint($break-medium) {
 		height: 400px;
+		margin-bottom: 1em;
 	}
 
 	@include breakpoint($break-xl) {
@@ -37,23 +37,35 @@
 .masthead__title {
 	color: $white;
 	font-family: $font-headings;
-	font-size: 40px;
-	font-size: 4rem;
+	font-size: 30px;
+	font-size: 3rem;
 	line-height: 1.2;
-	margin: 0.5em auto;
+	margin: 1em auto;
 	position: relative;
 	text-align: center;
 	text-shadow: 3px 3px $gray-dark;
 	text-transform: uppercase;
 	
+	@include breakpoint($break-small) {
+		font-size: 40px;
+		font-size: 4rem;
+	}
+
 	@include breakpoint($break-medium) {
+		font-size: 80px;
+		font-size: 8rem;
+		margin: 2em auto 0;
+		width: 90%;
+	}
+
+	@include breakpoint($break-large) {
 		font-size: 80px;
 		font-size: 8rem;
 		margin: 2em auto 0;
 		width: 70%;
 	}
 
-	@include breakpoint($break-large) {
+	@include breakpoint($break-xl) {
 		margin-top: 3em;
 	}
 
@@ -64,7 +76,7 @@
 			margin-top: 1.65em;
 		}
 
-		@include breakpoint($break-large) {
+		@include breakpoint($break-xl) {
 			margin-top: 2.65em;
 		}
 	}
@@ -76,7 +88,7 @@
 	font-size: 20px;
 	font-size: 2rem;
 	line-height: 1;
-	margin: 0 auto 1em;
+	margin: 0 auto 1.8em;
 	position: relative;
 	text-align: center;
 	text-shadow: 2px 2px $gray-dark;

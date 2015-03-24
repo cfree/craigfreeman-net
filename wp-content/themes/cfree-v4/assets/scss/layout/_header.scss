@@ -20,7 +20,11 @@
 	}
 
 	.admin-bar & {
-		top: 32px;
+		top: 46px;
+
+		@include breakpoint(783px) {
+			top: 32px;
+		}
 	}
 
 	.container {

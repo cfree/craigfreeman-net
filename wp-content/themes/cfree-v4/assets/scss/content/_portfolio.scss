@@ -30,9 +30,12 @@
 .portfolio-item {
 	@include clearfix;
 	position: relative;
+	max-width: 368px;
 
-	&:hover .portfolio-item__content {
-		opacity: 1;
+	@include breakpoint($break-medium) {
+		&:hover .portfolio-item__content {
+			opacity: 1;
+		}
 	}
 	
 	img {
@@ -45,11 +48,14 @@
 .portfolio-item__content {
 	background: rgba($gray-light, 0.7);
 	height: 100%;
-	opacity: 0;
 	position: absolute;
 	text-align: center;
-	transition: opacity 0.3s;
 	width: 100%;
+
+	@include breakpoint($break-medium) {
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
 
 	h3 {
 		margin: 20% 0 5%;

@@ -7,7 +7,7 @@
  * @package cfree
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'columns--three portfolio-item' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'column portfolio-item' ); ?>>
 	<div class="portfolio-item__content">
 		<h3><?php the_title(); ?></h3>
 		<a href="<?php the_permalink(); ?>" class="button button--primary"><?php _e( 'View', 'cfree' ); ?></a>

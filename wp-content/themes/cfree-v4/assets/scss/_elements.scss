@@ -54,33 +54,63 @@ h6 {
 }
 
 h1 {
-	font-size: 40px;
-	font-size: 4rem;
+	font-size: 30px;
+	font-size: 3rem;
+
+	@include breakpoint($break-medium) {
+		font-size: 40px;
+		font-size: 4rem;
+	}
 }
 
 h2 {
-	font-size: 32px;
-	font-size: 3.2rem;
+	font-size: 26px;
+	font-size: 2.6rem;
+
+	@include breakpoint($break-medium) {
+		font-size: 32px;
+		font-size: 3.2rem;
+	}
 }
 
 h3 {
-	font-size: 28px;
-	font-size: 2.8rem;
+	font-size: 24px;
+	font-size: 2.4rem;
+
+	@include breakpoint($break-medium) {
+		font-size: 32px;
+		font-size: 3.2rem;
+	}
 }
 
 h4 {
-	font-size: 24px;
-	font-size: 2.4rem;
+	font-size: 22px;
+	font-size: 2.2rem;
+
+	@include breakpoint($break-medium) {
+		font-size: 24px;
+		font-size: 2.4rem;
+	}
 }
 
 h5 {
-	font-size: 20px;
-	font-size: 2.0rem;
+	font-size: 18px;
+	font-size: 1.8rem;
+
+	@include breakpoint($break-medium) {
+		font-size: 20px;
+		font-size: 2.0rem;
+	}
 }
 
 h6 {
-	font-size: 18px;
-	font-size: 1.8rem;
+	font-size: 16px;
+	font-size: 1.6rem;
+
+	@include breakpoint($break-medium) {
+		font-size: 18px;
+		font-size: 1.8rem;
+	}
 }
 
 blockquote:before,

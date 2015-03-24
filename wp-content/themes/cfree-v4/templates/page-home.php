@@ -97,7 +97,7 @@ get_header();
 						while ( $article_query->have_posts() ):
 							$article_query->the_post();
 				?>
-							<article class="columns--three article-item">
+							<article class="column article-item">
 								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 								<?php the_excerpt(); ?>
 							</article>
