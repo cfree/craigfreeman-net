@@ -33,15 +33,15 @@ get_header();
 			<div class="container">
 				<div class="home__breakdown--design">
 					<h2><?php _e( 'Design', 'cfree' ); ?></h2>
-					<p>Augue in a sed! Ut sed. Integer sit, auctor! Sit adipiscing turpis porttitor turpis in, ut, turpis sed integer elit a porttitor, nisi a urna, nascetur, sociis massa sociis porttitor, in mattis lectus scelerisque. Ultrices enim a nisi nunc montes non dapibus augue quis etiam! Est. Placerat mauris?</p>
+					<p><?php _e( 'My graphic media background has instilled in me an eye for design, rhythm, and cleanliness. I’m an advocate for consistent designs and I appreciate intuitive user interfaces, both of which lend themselves to an enjoyable user experience. My graphics editor skills allow me to make revisions to design mockups and wireframes where needed.', 'cfree' ); ?></p>
 				</div>
 				<div class="home__breakdown--front">
 					<h2><?php _e( 'Front-End', 'cfree' ); ?></h2>
-					<p> Vel, a phasellus lacus a duis parturient, tincidunt enim, rhoncus sed magna, est proin urna? Risus ultrices porta, porta nisi, et adipiscing aliquam nascetur nec, vel integer platea auctor nec elit vel turpis et in scelerisque penatibus </p>
+					<p><?php _e( 'I create progressively-enhanced web sites and single-page applications by adhering to the <a href="http://cssguidelin.es/" target="_blank" rel="nofollow">CSS Guidelines</a>. My scalable <a href="http://sass-lang.com/" target="_blank" rel="nofollow">Sass</a> styles, object-oriented JavaScript and application of <a href="http://www.lukew.com/resources/mobile_first.asp" target="_blank" rel="nofollow">Mobile First</a> responsive web design principles marries data with design for optimized communication. This positions me perfectly as the bridge between design and the back-end.', 'cfree' ); ?></p>
 				</div>
 				<div class="home__breakdown--back">
 					<h2><?php _e( 'Back-End', 'cfree' ); ?></h2>
-					<p> Vel, a phasellus lacus a duis parturient, tincidunt enim, rhoncus sed magna, est proin urna? Risus ultrices porta, porta nisi, et adipiscing aliquam nascetur nec, vel integer platea auctor nec elit vel turpis et in scelerisque penatibus </p>
+					<p><?php _e( 'Whether writing routes for API endpoints, leveraging an ORM, or manually retrieving data from MySQL and MongoDB, my experience with object-oriented PHP and Node.js gives me a clear perspective on how to best interact with the databases providing data to the front-end.', 'cfree' ); ?></p>
 				</div>
 			</div><!-- .container -->
 		</section>
