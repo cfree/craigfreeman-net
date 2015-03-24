@@ -20,7 +20,7 @@
 		display: block;
 		height: 100%;
 		margin: 0;
-		max-height: auto;
+		max-height: 200px;
 	}
 	
 	.menu {
@@ -181,7 +181,11 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-	@include span(7 at 3 of 9);
+	@include span(full);
+
+	@include breakpoint($break-large) {
+		@include span(7 at 3 of 9);
+	}
 
 	.nav-previous {
 		float: left;

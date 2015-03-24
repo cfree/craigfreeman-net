@@ -725,7 +725,13 @@ hr {
 
 ul,
 ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 1.5em 0;
+}
+@media (min-width: 720px) {
+  ul,
+  ol {
+    margin: 0 0 1.5em 1.5em;
+  }
 }
 ul li,
 ol li {
@@ -1121,12 +1127,7 @@ big {
 }
 
 .hentry {
-  margin: 0 0 1.5em;
-}
-@media (min-width: 960px) {
-  .hentry {
-    margin-bottom: 4.5em;
-  }
+  margin: 0 0 4.5em;
 }
 
 .post-excerpt:before, .post-excerpt:after {
@@ -1148,21 +1149,25 @@ big {
   text-align: justify;
 }
 
-.entry-meta {
-  width: 19.23077%;
-  float: left;
-  margin-right: 3.84615%;
-  margin-top: 20px;
-  text-align: right;
-}
-.single-post .entry-meta {
-  margin-top: 26px;
+@media (min-width: 960px) {
+  .entry-meta {
+    width: 19.23077%;
+    float: left;
+    margin-right: 3.84615%;
+    margin-top: 20px;
+    text-align: right;
+  }
+  .single-post .entry-meta {
+    margin-top: 26px;
+  }
 }
 
-.post__content {
-  width: 76.92308%;
-  float: right;
-  margin-right: 0;
+@media (min-width: 960px) {
+  .post__content {
+    width: 76.92308%;
+    float: right;
+    margin-right: 0;
+  }
 }
 
 .page-links {
@@ -1174,12 +1179,21 @@ big {
 .cat-links,
 .tags-links,
 .comments-link {
-  position: relative;
+  display: block;
   font-family: "effra", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   margin-right: 20px;
+  position: relative;
   text-transform: uppercase;
+}
+@media (min-width: 480px) {
+  .posted-on,
+  .cat-links,
+  .tags-links,
+  .comments-link {
+    display: inline-block;
+  }
 }
 .posted-on:before,
 .cat-links:before,
@@ -1335,19 +1349,27 @@ big {
   width: 100%;
 }
 
-.has-aside .blog__main {
-  width: 74.28571%;
-  float: left;
-  margin-right: 2.85714%;
+@media (min-width: 720px) {
+  .has-aside .blog__main {
+    width: 74.28571%;
+    float: left;
+    margin-right: 2.85714%;
+  }
 }
-.has-aside #secondary {
-  width: 22.85714%;
-  float: right;
-  margin-right: 0;
-  margin-top: 20px;
+@media (min-width: 720px) {
+  .has-aside #secondary {
+    width: 22.85714%;
+    float: right;
+    margin-right: 0;
+  }
+  .single-post .has-aside #secondary {
+    margin-top: 26px;
+  }
 }
-.single-post .has-aside #secondary {
-  margin-top: 26px;
+@media (min-width: 960px) {
+  .has-aside #secondary {
+    margin-top: 20px;
+  }
 }
 
 .blog .format-aside .entry-title,
@@ -1355,10 +1377,12 @@ big {
   display: none;
 }
 
-.comments-area {
-  width: 76.92308%;
-  float: right;
-  margin-right: 0;
+@media (min-width: 960px) {
+  .comments-area {
+    width: 76.92308%;
+    float: right;
+    margin-right: 0;
+  }
 }
 
 .comment-content a {
@@ -1532,7 +1556,7 @@ big {
     display: block;
     height: 100%;
     margin: 0;
-    max-height: auto;
+    max-height: 200px;
   }
 }
 .site-navigation .menu {
@@ -1699,9 +1723,19 @@ big {
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-  width: 76.92308%;
-  float: right;
+  width: 100%;
+  float: left;
+  margin-left: 0;
   margin-right: 0;
+}
+@media (min-width: 960px) {
+  .comment-navigation,
+  .posts-navigation,
+  .post-navigation {
+    width: 76.92308%;
+    float: right;
+    margin-right: 0;
+  }
 }
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
@@ -2033,15 +2067,19 @@ button[type="submit"] {
   background-repeat: no-repeat;
   position: relative;
 }
+body:not(.home) .masthead {
+  margin-bottom: 1em;
+}
 @media (min-width: 720px) {
   .masthead {
     height: 400px;
-    margin-bottom: 1em;
   }
 }
 @media (min-width: 1800px) {
   .masthead {
     height: 600px;
+  }
+  body:not(.home) .masthead {
     margin-bottom: 3em;
   }
 }
@@ -2380,6 +2418,12 @@ button[type="submit"] {
 .portfolio-item__content h3 {
   margin: 20% 0 5%;
 }
+@media (max-width: 1799px) {
+  .portfolio-item__content h3 {
+    font-size: 22px;
+    font-size: 2.2rem;
+  }
+}
 
 .article-item p {
   text-align: justify;
@@ -2437,12 +2481,7 @@ button[type="submit"] {
 }
 
 .widget select {
-  max-width: 100%;
-}
-@media (min-width: 720px) {
-  .widget select {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .widget_search .search-submit {
@@ -2703,8 +2742,9 @@ form button {
   clear: both;
 }
 .has-columns .column {
-  margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
   text-align: left;
 }
 @media (min-width: 720px) {

@@ -80,11 +80,7 @@
 
 // Make sure select elements fit in widgets.
 .widget select {
-	max-width: 100%;
-
-	@include breakpoint($break-medium) {
-		width: 100%;
-	}
+	width: 100%;
 }
 
 // Search widget
@@ -324,8 +320,9 @@ form button {
 	text-align: center;
 
 	.column {
-		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: $space;
+		margin-left: auto;
 		text-align: left;
 
 		@include breakpoint($break-medium) {

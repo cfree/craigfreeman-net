@@ -40,11 +40,7 @@
 }
 
 .hentry {
-	margin: 0 0 1.5em;
-
-	@include breakpoint($break-large) {
-		margin-bottom: 4.5em;
-	}
+	margin: 0 0 4.5em;
 }
 
 .post-excerpt {
@@ -63,17 +59,21 @@
 }
 
 .entry-meta {
-	@include span(2 of 9 first);
-	margin-top: 20px;
-	text-align: right;
+	@include breakpoint($break-large) {
+		@include span(2 of 9 first);
+		margin-top: 20px;
+		text-align: right;
 
-	.single-post & {
-		margin-top: 26px;
+		.single-post & {
+			margin-top: 26px;
+		}
 	}
 }
 
 .post__content {
-	@include span(7 at 3 of 9 last);
+	@include breakpoint($break-large) {
+		@include span(7 at 3 of 9 last);
+	}
 }
 
 .page-links {
@@ -85,12 +85,17 @@
 .cat-links,
 .tags-links,
 .comments-link {
-	position: relative;
+	display: block;
 	font-family: $font-headings;
 	font-size: 16px;
 	font-size: 1.6rem;
 	margin-right: 20px;
+	position: relative;
 	text-transform: uppercase;
+
+	@include breakpoint($break-small) {
+		display: inline-block;
+	}
 
 	&:before {
 		@include icon;
@@ -230,15 +235,22 @@
 
 .has-aside {
 	.blog__main {
-		@include span(9 at 1);
+		@include breakpoint($break-medium) {
+			@include span(9 at 1);
+		}
 	}
 
 	#secondary {
-		@include span(3 at 9 last);
-		margin-top: 20px;
+		@include breakpoint($break-medium) {
+			@include span(3 at 9 last);
 
-		.single-post & {
-			margin-top: 26px;
+			.single-post & {
+				margin-top: 26px;
+			}
+		}
+
+		@include breakpoint($break-large) {
+			margin-top: 20px;
 		}
 	}
 }
@@ -259,7 +271,9 @@
 // --------
 
 .comments-area {
-	@include span(7 at 3 of 9);
+	@include breakpoint($break-large) {
+		@include span(7 at 3 of 9);
+	}
 }
 
 .comment-content a {
