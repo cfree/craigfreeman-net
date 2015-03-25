@@ -2233,7 +2233,7 @@ body:not(.home) .masthead {
   position: relative;
   z-index: 2;
 }
-@media (min-width: 480px) {
+@media (min-width: 720px) {
   .home__breakdown--design {
     clear: both;
     width: 40%;
@@ -2261,7 +2261,7 @@ body:not(.home) .masthead {
   top: -35px;
   z-index: -1;
 }
-@media (min-width: 480px) {
+@media (min-width: 720px) {
   .home__breakdown--design:before {
     font-size: 320px;
     font-size: 32rem;
@@ -2279,7 +2279,7 @@ body:not(.home) .masthead {
   position: relative;
   z-index: 2;
 }
-@media (min-width: 480px) {
+@media (min-width: 720px) {
   .home__breakdown--front {
     clear: both;
     width: 40%;
@@ -2307,7 +2307,7 @@ body:not(.home) .masthead {
   top: -35px;
   z-index: -1;
 }
-@media (min-width: 480px) {
+@media (min-width: 720px) {
   .home__breakdown--front:before {
     font-size: 270px;
     font-size: 27rem;
@@ -2339,7 +2339,7 @@ body:not(.home) .masthead {
   position: relative;
   z-index: 2;
 }
-@media (min-width: 480px) {
+@media (min-width: 720px) {
   .home__breakdown--back {
     clear: both;
     width: 40%;
@@ -2367,17 +2367,12 @@ body:not(.home) .masthead {
   top: -30px;
   z-index: -1;
 }
-@media (min-width: 480px) {
+@media (min-width: 720px) {
   .home__breakdown--back:before {
     font-size: 250px;
     font-size: 25rem;
-    right: 91.42857%;
-    top: 0;
-  }
-}
-@media (min-width: 720px) {
-  .home__breakdown--back:before {
     right: 108.57143%;
+    top: 0;
   }
 }
 
