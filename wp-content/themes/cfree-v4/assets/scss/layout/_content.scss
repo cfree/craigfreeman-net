@@ -242,21 +242,27 @@
 .has-aside {
 	.blog__main {
 		@include breakpoint($break-medium) {
-			@include span(9 at 1);
+			@include span(isolate 10 at 2);
+		}
+
+		@include breakpoint($break-large) {
+			@include isolate(0);
+			@include span(9 at 1 first);
 		}
 	}
 
 	#secondary {
 		@include breakpoint($break-medium) {
-			@include span(3 at 9 last);
-
-			.single-post & {
-				margin-top: 26px;
-			}
+			@include span(isolate 8 at 3 break);
 		}
 
 		@include breakpoint($break-large) {
-			margin-top: 20px;
+			@include isolate(0);
+			@include span(3 at 10 last nobreak);
+
+			.single-post & {
+				margin-top: 20px;
+			}
 		}
 	}
 }

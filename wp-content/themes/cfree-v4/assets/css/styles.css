@@ -1375,6 +1375,17 @@ big {
 
 @media (min-width: 720px) {
   .has-aside .blog__main {
+    width: 82.85714%;
+    float: left;
+    margin-left: 8.57143%;
+    margin-right: -100%;
+  }
+}
+@media (min-width: 960px) {
+  .has-aside .blog__main {
+    float: left;
+    margin-left: 0;
+    margin-right: -100%;
     width: 74.28571%;
     float: left;
     margin-right: 2.85714%;
@@ -1382,16 +1393,24 @@ big {
 }
 @media (min-width: 720px) {
   .has-aside #secondary {
+    clear: both;
+    width: 65.71429%;
+    float: left;
+    margin-left: 17.14286%;
+    margin-right: -100%;
+  }
+}
+@media (min-width: 960px) {
+  .has-aside #secondary {
+    float: left;
+    margin-left: 0;
+    margin-right: -100%;
+    clear: none;
     width: 22.85714%;
     float: right;
     margin-right: 0;
   }
   .single-post .has-aside #secondary {
-    margin-top: 26px;
-  }
-}
-@media (min-width: 960px) {
-  .has-aside #secondary {
     margin-top: 20px;
   }
 }
