@@ -16,7 +16,7 @@
 
  /** For local development only, if local-config.php exists use contants in that file */
 if (file_exists(dirname(__FILE__).'/local-config.php')) {
-        include_once(dirname(__FILE__).'/local-config.php');
+	include_once(dirname(__FILE__).'/local-config.php');
 }
 
 @define('WP_CACHE', false);
