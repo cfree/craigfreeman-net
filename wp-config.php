@@ -21,29 +21,29 @@ if (file_exists(dirname(__FILE__).'/local-config.php')) {
 
 @define('WP_CACHE', false);
 
-define('WP_SITEURL', 'http://'.$_SERVER['HTTP_HOST'].'/wp');
-define('WP_HOME', 'http://'.$_SERVER['HTTP_HOST']);
-define('WP_CONTENT_URL', WP_HOME.'/wp-content');
-define('WP_CONTENT_DIR', dirname(__FILE__).'/wp-content');
+@define('WP_SITEURL', 'http://'.$_SERVER['HTTP_HOST'].'/wp');
+@define('WP_HOME', 'http://'.$_SERVER['HTTP_HOST']);
+@define('WP_CONTENT_URL', WP_HOME.'/wp-content');
+@define('WP_CONTENT_DIR', dirname(__FILE__).'/wp-content');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'oneninfi_wp');
+@define('DB_NAME', 'oneninfi_wp');
 
 /** MySQL database username */
-define('DB_USER', 'oneninfi_cf');
+@define('DB_USER', 'oneninfi_cf');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'ch4dw1ck!');
+@define('DB_PASSWORD', 'ch4dw1ck!');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+@define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
+@define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+@define('DB_COLLATE', '');
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -90,7 +90,7 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+@define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 
