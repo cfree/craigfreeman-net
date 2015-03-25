@@ -77,7 +77,7 @@ get_header();
 		<section class="section--dark">
 			<div class="container">
 				<a href="https://github.com/cfree" class="button button--primary--ghost-on-hover"><?php _e( 'GitHub', 'cfree' ); ?></a>
-				<a href="<?php echo site_url( '/resume' ); ?>" class="button button--primary--ghost-on-hover"><?php _e( 'Resume', 'cfree' ); ?></a>
+				<a href="<?php echo home_url( '/resume' ); ?>" class="button button--primary--ghost-on-hover"><?php _e( 'Resume', 'cfree' ); ?></a>
 				<a href="http://linkedin.com/in/cfree" class="button button--primary--ghost-on-hover"><?php _e( 'LinkedIn', 'cfree' ); ?></a>
 			</div><!-- .container -->
 		</section>
