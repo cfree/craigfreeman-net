@@ -4,3 +4,6 @@
 [submodule "wp-content/plugins/wp-karten"]
 	path = wp-content/plugins/wp-karten
 	url = git@github.com:cfree/wp-karten.git
+[submodule "wp-content/plugins/wp-hidpi-images"]
+	path = wp-content/plugins/wp-hidpi-images
+	url = git@github.com:crowdfavorite/wp-hidpi-images.git
