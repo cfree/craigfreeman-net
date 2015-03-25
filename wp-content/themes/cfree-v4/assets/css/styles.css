@@ -1125,6 +1125,10 @@ big {
 .content-area p {
   line-height: 1.6;
 }
+.content-area img {
+  height: auto;
+  max-width: 100%;
+}
 
 @media (min-width: 720px) {
   .page-content {
@@ -2216,9 +2220,6 @@ body:not(.home) .masthead {
   background-image: url("../img/heroes/typewriter.jpg");
 }
 
-.home__intro {
-  text-align: justify;
-}
 @media (min-width: 720px) {
   .home__intro {
     width: 65.71429%;
@@ -2520,6 +2521,10 @@ body:not(.home) .masthead {
 
 .widget_search .search-submit {
   display: none;
+}
+
+.border {
+  border: 3px solid #F1F1F1;
 }
 
 .breakpoint-context {

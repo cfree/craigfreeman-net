@@ -7,8 +7,6 @@
 // --------
 
 .home__intro {
-	text-align: justify;
-
 	@include breakpoint($break-medium) {
 		@include span(isolate 8 at 3);
 	}
