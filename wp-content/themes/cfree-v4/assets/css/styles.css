@@ -697,22 +697,36 @@ q:after {
 
 blockquote,
 q {
-  padding: 40px 0;
+  padding: 10px 0;
   text-align: center;
+}
+@media (min-width: 720px) {
+  blockquote,
+  q {
+    padding: 40px 0;
+  }
 }
 blockquote p,
 q p {
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   font-style: italic;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   text-align: left;
-  width: 70%;
 }
-blockquote p + p,
-q p + p {
-  margin-top: 1.5em;
+@media (min-width: 720px) {
+  blockquote p,
+  q p {
+    font-size: 24px;
+    font-size: 2.4rem;
+    padding: 20px;
+    width: 70%;
+  }
+}
+blockquote p p,
+q p p {
+  margin-bottom: 1.5em;
 }
 
 hr {
@@ -828,8 +842,10 @@ i {
   font-style: italic;
 }
 
-blockquote {
-  margin: 0 1.5em;
+@media (min-width: 720px) {
+  blockquote {
+    margin: 0 1.5em;
+  }
 }
 
 address {
@@ -2386,11 +2402,13 @@ body:not(.home) .masthead {
   margin-right: -100%;
 }
 
-.portfolio-content {
-  width: 65.71429%;
-  float: left;
-  margin-left: 17.14286%;
-  margin-right: -100%;
+@media (min-width: 720px) {
+  .portfolio-content {
+    width: 65.71429%;
+    float: left;
+    margin-left: 17.14286%;
+    margin-right: -100%;
+  }
 }
 .portfolio-content .post-navigation {
   width: 100%;

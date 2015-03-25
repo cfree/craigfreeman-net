@@ -122,20 +122,30 @@ q:after {
 
 blockquote,
 q {
-	padding: ($space * 2) 0;
+	padding: 10px 0;
 	text-align: center;
 
+	@include breakpoint($break-medium) {
+		padding: ($space * 2) 0;
+	}
+
 	p {
-		font-size: 24px;
-		font-size: 2.4rem;
+		font-size: 18px;
+		font-size: 1.8rem;
 		font-style: italic;
 		margin: 0 auto;
-		padding: $space;
+		padding: $space / 2;
 		text-align: left;
-		width: 70%;
 
-		& + p {
-			margin-top: 1.5em;
+		@include breakpoint($break-medium) {
+			font-size: 24px;
+			font-size: 2.4rem;
+			padding: $space;
+			width: 70%;
+		}
+		
+		p {
+			margin-bottom: 1.5em;
 		}
 	}
 }
