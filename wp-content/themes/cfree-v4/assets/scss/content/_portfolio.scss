@@ -12,6 +12,10 @@
 
 .portfolio-content {
 	@include breakpoint($break-medium) {
+		@include span(isolate 10 at 2);
+	}
+
+	@include breakpoint($break-large) {
 		@include span(isolate 8 at 3);
 	}
 
