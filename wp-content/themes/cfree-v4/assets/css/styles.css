@@ -1391,6 +1391,9 @@ big {
     margin-right: 2.85714%;
   }
 }
+.has-aside #secondary {
+  margin-top: 20px;
+}
 @media (min-width: 720px) {
   .has-aside #secondary {
     clear: both;
@@ -1409,9 +1412,6 @@ big {
     width: 22.85714%;
     float: right;
     margin-right: 0;
-  }
-  .single-post .has-aside #secondary {
-    margin-top: 20px;
   }
 }
 
