@@ -1132,6 +1132,14 @@ big {
 
 @media (min-width: 720px) {
   .page-content {
+    width: 82.85714%;
+    float: left;
+    margin-left: 8.57143%;
+    margin-right: -100%;
+  }
+}
+@media (min-width: 960px) {
+  .page-content {
     width: 65.71429%;
     float: left;
     margin-left: 17.14286%;
