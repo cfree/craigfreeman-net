@@ -2280,6 +2280,15 @@ body:not(.home) .masthead {
 @media (min-width: 720px) {
   .home__breakdown--design {
     clear: both;
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%;
+    margin-left: 42.85714%;
+  }
+}
+@media (min-width: 960px) {
+  .home__breakdown--design {
+    clear: both;
     width: 40%;
     float: left;
     margin-right: 2.85714%;
@@ -2309,7 +2318,7 @@ body:not(.home) .masthead {
   .home__breakdown--design:before {
     font-size: 320px;
     font-size: 32rem;
-    right: 82.85714%;
+    right: 91.42857%;
     top: 0;
   }
 }
@@ -2324,6 +2333,15 @@ body:not(.home) .masthead {
   z-index: 2;
 }
 @media (min-width: 720px) {
+  .home__breakdown--front {
+    clear: both;
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%;
+    margin-left: 8.57143%;
+  }
+}
+@media (min-width: 960px) {
   .home__breakdown--front {
     clear: both;
     width: 40%;
@@ -2384,6 +2402,15 @@ body:not(.home) .masthead {
   z-index: 2;
 }
 @media (min-width: 720px) {
+  .home__breakdown--back {
+    clear: both;
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%;
+    margin-left: 42.85714%;
+  }
+}
+@media (min-width: 960px) {
   .home__breakdown--back {
     clear: both;
     width: 40%;
