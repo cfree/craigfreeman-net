@@ -5,7 +5,7 @@
  * @package cfree
  */
 
-define( 'CF_ASSETS_VERSION', '1.0.0' );
+define( 'CF_ASSETS_VERSION', '1.0.1' );
 
 /**
  * Includes
