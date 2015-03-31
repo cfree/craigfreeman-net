@@ -37,7 +37,7 @@ get_header();
 				</div>
 				<div class="home__breakdown--front">
 					<h2><?php _e( 'Front-End', 'cfree' ); ?></h2>
-					<p><?php _e( 'I create progressively-enhanced web sites and single-page applications by adhering to the <a href="http://cssguidelin.es/" target="_blank" rel="nofollow">CSS Guidelines</a>. My scalable Sass styles, object-oriented JavaScript and application of responsive web design principles marries data with design for optimized communication. This positions me as a seemless bridge between design and the back-end.', 'cfree' ); ?></p>
+					<p><?php _e( 'I create progressively-enhanced web sites and single-page applications by adhering to the <a href="http://cssguidelin.es/" target="_blank" rel="nofollow">CSS Guidelines</a>. My scalable Sass styles, object-oriented JavaScript and application of responsive web design principles marries data with design for optimized communication. This positions me as a seamless bridge between design and the back-end.', 'cfree' ); ?></p>
 				</div>
 				<div class="home__breakdown--back">
 					<h2><?php _e( 'Back-End', 'cfree' ); ?></h2>
