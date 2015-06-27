@@ -1421,11 +1421,21 @@ big {
 }
 
 @media (min-width: 960px) {
-  .comments-area {
+  .comments-area,
+  #social {
     width: 76.92308%;
     float: right;
     margin-right: 0;
   }
+}
+
+#social {
+  background: url(../img/lines-gray.png) left top repeat-x;
+  padding-top: 20px;
+}
+#social #reply-title {
+  background: none;
+  padding: 0;
 }
 
 .comment-content a {
