@@ -17,6 +17,11 @@
 	p {
 		line-height: 1.6;
 	}
+
+	img {
+		height: auto;
+		max-width: 100%;
+	}
 }
 
 
@@ -29,6 +34,10 @@
 
 .page-content {
 	@include breakpoint($break-medium) {
+		@include span(isolate 10 at 2);
+	}
+
+	@include breakpoint($break-large) {
 		@include span(isolate 8 at 3);
 	}
 }
@@ -233,21 +242,25 @@
 .has-aside {
 	.blog__main {
 		@include breakpoint($break-medium) {
-			@include span(9 at 1);
+			@include span(isolate 10 at 2);
+		}
+
+		@include breakpoint($break-large) {
+			@include isolate(0);
+			@include span(9 at 1 first);
 		}
 	}
 
 	#secondary {
-		@include breakpoint($break-medium) {
-			@include span(3 at 9 last);
+		margin-top: 20px;
 
-			.single-post & {
-				margin-top: 26px;
-			}
+		@include breakpoint($break-medium) {
+			@include span(isolate 8 at 3 break);
 		}
 
 		@include breakpoint($break-large) {
-			margin-top: 20px;
+			@include isolate(0);
+			@include span(3 at 10 last nobreak);
 		}
 	}
 }
@@ -267,9 +280,20 @@
 // Comments
 // --------
 
-.comments-area {
+.comments-area,
+#social {
 	@include breakpoint($break-large) {
 		@include span(7 at 3 of 9);
+	}
+}
+
+#social {
+	background: url(../img/lines-gray.png) left top repeat-x;
+	padding-top: 20px;
+
+	#reply-title {
+		background: none;
+		padding: 0;
 	}
 }
 

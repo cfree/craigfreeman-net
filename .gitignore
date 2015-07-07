@@ -4,6 +4,7 @@ archives/
 sitemap.xml
 work/
 .getinfo.php
+wp-config.php
 local-config.php
 wp-content/uploads/
 wp-content/plugins/

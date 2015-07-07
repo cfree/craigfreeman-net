@@ -13,6 +13,8 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="google-site-verification" content="0WxNuolI-hVRiZmWEw41DhyUpTFkyq-WTFqqdYS-o7g" />
+<meta name="google-site-verification" content="JPXpojt0iVpvLEHDIKNBb8ZVzmzH2GGLB3ui36Bv5jI" />
 
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -67,7 +69,7 @@
 				?>
 				<ul class="site-header__social">
 					<li><a class="site-social site-social--twitter" title="Twitter" href="https://twitter.com/craigfreeman" target="_blank"><?php _e( 'Twitter', 'cfree' ); ?></a></li>
-					<li><a class="site-social site-social--github" title="GitHub" href="http://github.com/cfree" target="_blank"><?php _e( 'GitHub', 'cfree' ); ?></a></li>
+					<li><a class="site-social site-social--github" title="GitHub" href="https://github.com/cfree" target="_blank"><?php _e( 'GitHub', 'cfree' ); ?></a></li>
 					<li><a class="site-social site-social--linkedin" title="LinkedIn" href="https://linkedin.com/in/cfree" target="_blank"><?php _e( 'LinkedIn', 'cfree' ); ?></a></li>
 					<li><a class="site-social site-social--meetup" title="Denver Code Club" href="http://meetup.com/denver-code-club" target="_blank"><?php _e( 'Denver Code Club', 'cfree' ); ?></a></li>
 					<li><a class="site-social site-social--message js-message" title="Message Me" href="#message" data-addr="craigfreeman@gmail.com" target="_blank"><?php _e( 'Message Me', 'cfree' ); ?></a></li>

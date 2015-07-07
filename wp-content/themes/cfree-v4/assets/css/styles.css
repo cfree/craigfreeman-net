@@ -697,22 +697,36 @@ q:after {
 
 blockquote,
 q {
-  padding: 40px 0;
+  padding: 10px 0;
   text-align: center;
+}
+@media (min-width: 720px) {
+  blockquote,
+  q {
+    padding: 40px 0;
+  }
 }
 blockquote p,
 q p {
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   font-style: italic;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   text-align: left;
-  width: 70%;
 }
-blockquote p + p,
-q p + p {
-  margin-top: 1.5em;
+@media (min-width: 720px) {
+  blockquote p,
+  q p {
+    font-size: 24px;
+    font-size: 2.4rem;
+    padding: 20px;
+    width: 70%;
+  }
+}
+blockquote p p,
+q p p {
+  margin-bottom: 1.5em;
 }
 
 hr {
@@ -828,8 +842,10 @@ i {
   font-style: italic;
 }
 
-blockquote {
-  margin: 0 1.5em;
+@media (min-width: 720px) {
+  blockquote {
+    margin: 0 1.5em;
+  }
 }
 
 address {
@@ -1109,8 +1125,20 @@ big {
 .content-area p {
   line-height: 1.6;
 }
+.content-area img {
+  height: auto;
+  max-width: 100%;
+}
 
 @media (min-width: 720px) {
+  .page-content {
+    width: 82.85714%;
+    float: left;
+    margin-left: 8.57143%;
+    margin-right: -100%;
+  }
+}
+@media (min-width: 960px) {
   .page-content {
     width: 65.71429%;
     float: left;
@@ -1347,24 +1375,43 @@ big {
 
 @media (min-width: 720px) {
   .has-aside .blog__main {
+    width: 82.85714%;
+    float: left;
+    margin-left: 8.57143%;
+    margin-right: -100%;
+  }
+}
+@media (min-width: 960px) {
+  .has-aside .blog__main {
+    float: left;
+    margin-left: 0;
+    margin-right: -100%;
     width: 74.28571%;
     float: left;
     margin-right: 2.85714%;
   }
 }
+.has-aside #secondary {
+  margin-top: 20px;
+}
 @media (min-width: 720px) {
   .has-aside #secondary {
-    width: 22.85714%;
-    float: right;
-    margin-right: 0;
-  }
-  .single-post .has-aside #secondary {
-    margin-top: 26px;
+    clear: both;
+    width: 65.71429%;
+    float: left;
+    margin-left: 17.14286%;
+    margin-right: -100%;
   }
 }
 @media (min-width: 960px) {
   .has-aside #secondary {
-    margin-top: 20px;
+    float: left;
+    margin-left: 0;
+    margin-right: -100%;
+    clear: none;
+    width: 22.85714%;
+    float: right;
+    margin-right: 0;
   }
 }
 
@@ -1374,11 +1421,21 @@ big {
 }
 
 @media (min-width: 960px) {
-  .comments-area {
+  .comments-area,
+  #social {
     width: 76.92308%;
     float: right;
     margin-right: 0;
   }
+}
+
+#social {
+  background: url(../img/lines-gray.png) left top repeat-x;
+  padding-top: 20px;
+}
+#social #reply-title {
+  background: none;
+  padding: 0;
 }
 
 .comment-content a {
@@ -1976,6 +2033,9 @@ input[type="submit"],
 button[type="submit"] {
   -moz-appearance: none;
   -webkit-appearance: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 .search-form {
@@ -2107,7 +2167,8 @@ body:not(.home) .masthead {
   font-size: 30px;
   font-size: 3rem;
   line-height: 1.2;
-  margin: 1em auto;
+  margin: 0 auto;
+  padding: 1em 0;
   position: relative;
   text-align: center;
   text-shadow: 3px 3px #3D4C53;
@@ -2123,7 +2184,7 @@ body:not(.home) .masthead {
   .masthead__title {
     font-size: 80px;
     font-size: 8rem;
-    margin: 2em auto 0;
+    padding: 2em 0 0;
     width: 90%;
   }
 }
@@ -2131,26 +2192,25 @@ body:not(.home) .masthead {
   .masthead__title {
     font-size: 80px;
     font-size: 8rem;
-    margin: 2em auto 0;
     width: 70%;
   }
 }
 @media (min-width: 1800px) {
   .masthead__title {
-    margin-top: 3em;
+    padding-top: 3em;
   }
 }
 .masthead__title.has-subtitle {
-  margin-bottom: 0;
+  padding-bottom: 0;
 }
 @media (min-width: 720px) {
   .masthead__title.has-subtitle {
-    margin-top: 1.65em;
+    padding-top: 1.65em;
   }
 }
 @media (min-width: 1800px) {
   .masthead__title.has-subtitle {
-    margin-top: 2.65em;
+    padding-top: 2.65em;
   }
 }
 
@@ -2160,7 +2220,8 @@ body:not(.home) .masthead {
   font-size: 20px;
   font-size: 2rem;
   line-height: 1;
-  margin: 0 auto 1.8em;
+  margin: 0 auto;
+  padding: 0 0 1.8em;
   position: relative;
   text-align: center;
   text-shadow: 2px 2px #3D4C53;
@@ -2170,7 +2231,7 @@ body:not(.home) .masthead {
   .masthead__subtitle {
     font-size: 40px;
     font-size: 4rem;
-    margin: 0.2em auto 0;
+    padding: 0.2em 0 0;
     width: 80%;
   }
 }
@@ -2199,9 +2260,6 @@ body:not(.home) .masthead {
   background-image: url("../img/heroes/typewriter.jpg");
 }
 
-.home__intro {
-  text-align: justify;
-}
 @media (min-width: 720px) {
   .home__intro {
     width: 65.71429%;
@@ -2232,7 +2290,16 @@ body:not(.home) .masthead {
   position: relative;
   z-index: 2;
 }
-@media (min-width: 480px) {
+@media (min-width: 720px) {
+  .home__breakdown--design {
+    clear: both;
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%;
+    margin-left: 42.85714%;
+  }
+}
+@media (min-width: 960px) {
   .home__breakdown--design {
     clear: both;
     width: 40%;
@@ -2260,11 +2327,11 @@ body:not(.home) .masthead {
   top: -35px;
   z-index: -1;
 }
-@media (min-width: 480px) {
+@media (min-width: 720px) {
   .home__breakdown--design:before {
     font-size: 320px;
     font-size: 32rem;
-    right: 82.85714%;
+    right: 91.42857%;
     top: 0;
   }
 }
@@ -2278,7 +2345,16 @@ body:not(.home) .masthead {
   position: relative;
   z-index: 2;
 }
-@media (min-width: 480px) {
+@media (min-width: 720px) {
+  .home__breakdown--front {
+    clear: both;
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%;
+    margin-left: 8.57143%;
+  }
+}
+@media (min-width: 960px) {
   .home__breakdown--front {
     clear: both;
     width: 40%;
@@ -2306,7 +2382,7 @@ body:not(.home) .masthead {
   top: -35px;
   z-index: -1;
 }
-@media (min-width: 480px) {
+@media (min-width: 720px) {
   .home__breakdown--front:before {
     font-size: 270px;
     font-size: 27rem;
@@ -2338,7 +2414,16 @@ body:not(.home) .masthead {
   position: relative;
   z-index: 2;
 }
-@media (min-width: 480px) {
+@media (min-width: 720px) {
+  .home__breakdown--back {
+    clear: both;
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%;
+    margin-left: 42.85714%;
+  }
+}
+@media (min-width: 960px) {
   .home__breakdown--back {
     clear: both;
     width: 40%;
@@ -2366,17 +2451,12 @@ body:not(.home) .masthead {
   top: -30px;
   z-index: -1;
 }
-@media (min-width: 480px) {
+@media (min-width: 720px) {
   .home__breakdown--back:before {
     font-size: 250px;
     font-size: 25rem;
-    right: 91.42857%;
-    top: 0;
-  }
-}
-@media (min-width: 720px) {
-  .home__breakdown--back:before {
     right: 108.57143%;
+    top: 0;
   }
 }
 
@@ -2390,11 +2470,21 @@ body:not(.home) .masthead {
   margin-right: -100%;
 }
 
-.portfolio-content {
-  width: 65.71429%;
-  float: left;
-  margin-left: 17.14286%;
-  margin-right: -100%;
+@media (min-width: 720px) {
+  .portfolio-content {
+    width: 82.85714%;
+    float: left;
+    margin-left: 8.57143%;
+    margin-right: -100%;
+  }
+}
+@media (min-width: 960px) {
+  .portfolio-content {
+    width: 65.71429%;
+    float: left;
+    margin-left: 17.14286%;
+    margin-right: -100%;
+  }
 }
 .portfolio-content .post-navigation {
   width: 100%;
@@ -2478,15 +2568,33 @@ body:not(.home) .masthead {
 }
 
 .alignleft {
-  display: inline;
-  float: left;
-  margin-right: 1.5em;
+  clear: both;
+  display: block;
+  margin: 0 auto 1.5em;
+}
+@media (min-width: 480px) {
+  .alignleft {
+    clear: none;
+    display: inline;
+    float: left;
+    margin-bottom: 0;
+    margin-right: 1.5em;
+  }
 }
 
 .alignright {
-  display: inline;
-  float: right;
-  margin-left: 1.5em;
+  clear: both;
+  display: block;
+  margin: 0 auto 1.5em;
+}
+@media (min-width: 480px) {
+  .alignright {
+    clear: none;
+    display: inline;
+    float: right;
+    margin-bottom: 0;
+    margin-left: 1.5em;
+  }
 }
 
 .aligncenter {
@@ -2506,6 +2614,10 @@ body:not(.home) .masthead {
 
 .widget_search .search-submit {
   display: none;
+}
+
+.border {
+  border: 3px solid #F1F1F1;
 }
 
 .breakpoint-context {

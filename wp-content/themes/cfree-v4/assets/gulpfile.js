@@ -8,11 +8,14 @@ var gulp = require('gulp'),
 	filesChanged = require('gulp-changed'),
 	jsHint = require('gulp-jshint'),
 	livereload = require('gulp-livereload'),
-	compressImgs = require('gulp-imagemin'),
 	notify = require('gulp-notify'),
 	map = require('map-stream'),
 	bower = require('gulp-bower'),
+	jsMinify = require('gulp-uglify'),
+    cssMinify = require('gulp-minify-css'),
+    joinFiles = require('gulp-concat'),
 	watching = false,
+	rename = require('gulp-rename'),
 	files = {
 		all: {
 			scss: 'scss/**/*.scss',
@@ -33,7 +36,8 @@ var gulp = require('gulp'),
 		css: 'css/',
 		js: 'js/',
 		img: 'img/',
-		bower: './vendor/'
+		bower: './vendor/',
+		dist: 'dist/'
 	};
 
 
@@ -79,21 +83,6 @@ gulp.task('runBower', function() {
 		.pipe(gulp.dest(paths.bower));
 });
 
-// Compress images
-gulp.task('compressImgs', function() {
-	gulp.src(files.all.img)
-		.pipe(
-			filesCached(
-				compressImgs({
-					optimizationLevel: 7,
-					progressive: true,
-					interlaced: true
-				})
-			)
-		)
-		.pipe(gulp.dest(paths.img));
-});
-
 // Set watch mode
 gulp.task('setWatchStatus', function() {
 	watching = true;
@@ -106,14 +95,19 @@ gulp.task('setWatchStatus', function() {
 
 // Process style files
 gulp.task('readyStyles', function() {
-	// Minify
-	// Concatenate
+	gulp.src(files.all.css)
+		.pipe(cssMinify())
+		.pipe(rename('styles.min.css'))
+		.pipe(gulp.dest(paths.dist));
 });
 
 // Process script files
 gulp.task('readyScripts', function() {
-	// Minify
-	// Concatenate
+	gulp.src(paths.js + 'scripts.js')
+		// .pipe(joinFiles('scripts.min.js'))
+		.pipe(jsMinify())
+		.pipe(rename('scripts.min.js'))
+		.pipe(gulp.dest(paths.dist));
 });
 
 
@@ -126,7 +120,7 @@ gulp.task('watch', ['setWatchStatus'], function() {
 	livereload.listen();
 });
 
-gulp.task('build', ['compressImgs', 'readyStyles', 'readyScripts']);
+gulp.task('build', ['readyStyles', 'readyScripts']);
 
 gulp.task('install', ['runBower']);
 
