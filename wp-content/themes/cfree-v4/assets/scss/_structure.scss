@@ -11,3 +11,11 @@
 		padding: 0 ($space * 0.75);
 	}
 }
+
+div#fancy_overlay {
+	z-index: 130;
+}
+
+div#fancy_outer {
+	z-index: 190;
+}
