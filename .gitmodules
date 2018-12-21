@@ -1,9 +1,0 @@
-[submodule "wp-content/themes/cfree-v4/plugins/CMB2"]
-	path = wp-content/themes/cfree-v4/plugins/CMB2
-	url = git@github.com:WebDevStudios/CMB2.git
-[submodule "wp-content/plugins/wp-karten"]
-	path = wp-content/plugins/wp-karten
-	url = git@github.com:cfree/wp-karten.git
-[submodule "wp-content/plugins/wp-hidpi-images"]
-	path = wp-content/plugins/wp-hidpi-images
-	url = git@github.com:crowdfavorite/wp-hidpi-images.git
