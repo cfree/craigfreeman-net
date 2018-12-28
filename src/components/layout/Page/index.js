@@ -1,22 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 
-import globalStyles from '../../../assets/styles/global'
+import GlobalStyles from '../../../assets/styles/global'
 import theme from '../../../assets/styles/theme'
-import Header from '../Header'
-import Footer from '../Footer'
-// import './layout.css'
-
-createGlobalStyle`${globalStyles(theme)}`
-
-const StyledContainer = styled.main`
-  max-width: ${({ theme }) => theme.breakpoints.maxWidth};
-  margin: 0 auto;
-  box-shadow: ${({ theme }) => theme.vars.bs};
-  padding: 20px;
-`
+import { Header, Footer } from '../'
+import { StyledPage } from './page.styles'
 
 const Page = ({ children }) => (
   <StaticQuery
@@ -32,11 +22,14 @@ const Page = ({ children }) => (
     render={data => (
       <ThemeProvider theme={theme}>
         <>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <StyledContainer>
-            {children}
-          </StyledContainer>
-          <Footer />
+          <GlobalStyles />
+          <StyledPage>
+            <Header siteTitle={data.site.siteMetadata.title} />
+            <div id="content">
+              {children}
+            </div>
+            <Footer />
+          </StyledPage>
         </>
       </ThemeProvider>
     )}

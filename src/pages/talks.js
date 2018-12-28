@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Page from '../components/layout/page'
-import SEO from '../components/layout/seo'
+import { Page, SEO } from '../components/Layout'
 
 const TalksPage = () => (
   <Page>

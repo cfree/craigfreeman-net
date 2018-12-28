@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Craig Freeman, Denver UI Engineer`,
+    title: `Test Site`,
     description: ``,
     author: `@craigfreeman`,
   },
@@ -26,6 +26,14 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
       },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: {
+          id: 'fvl4wvq'
+        }
+      }
     },
     `gatsby-plugin-styled-components`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
