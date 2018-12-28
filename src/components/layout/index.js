@@ -1,7 +1,6 @@
 import Container from './Container'
 import Footer from './Footer'
 import Header from './Header'
-import Layout from './Layout'
 import Main from './Main'
 import Nav from './Nav'
 import Page from './Page'
@@ -18,5 +17,3 @@ export {
   Section,
   SEO,
 };
-
-export default Layout;

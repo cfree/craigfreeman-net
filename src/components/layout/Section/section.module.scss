@@ -1,6 +1,8 @@
 @import '../../../assets/styles/variables.module.scss';
 
 .section {
+  text-align: center;
+  color: $color-light;
   padding: 40px 0;
   
   @media (min-width: $bp-md) {
@@ -9,7 +11,5 @@
 }
 
 .dark {
-  background-color: $color-gray-dark;
-  background-image: url('../../../assets/images/bg-grid-dark.svg');
-  background-position: center;
+  background: $color-gray url('../../../assets/images/bg-grid-dark.svg') center center;
 }

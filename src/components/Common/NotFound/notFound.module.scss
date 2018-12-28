@@ -1,0 +1,56 @@
+@import '../../../assets/styles/variables.module.scss';
+
+.notFound {
+	color: $color-light;
+}
+
+.heading {
+	font-family: $font-primary;
+	font-size: 60px;
+	font-size: 6rem;
+	text-transform: uppercase;
+}
+
+.subheading {
+	margin-bottom: 30px;
+}
+
+.searchForm {
+	// @include search-form;
+	border-bottom: 3px solid $color-light;
+
+	input[type="text"] {
+		background: rgba($color-light, 0.3);
+		color: $color-light;
+
+		&:focus {
+			color: $color-light;
+		}
+	}
+
+	.search-button {
+		&:before,
+		&:hover {
+			color: $color-light;
+		}
+	}
+}
+
+.notice {
+	bottom: $space;
+	height: 50px;
+	opacity: 0.5;
+	position: absolute;
+	right: $space;
+	transition: opacity 0.3s;
+	width: 87px;
+
+	&:hover {
+		opacity: 1;
+	}
+	
+	img {
+		height: auto;
+		width: 100%;
+	}
+}

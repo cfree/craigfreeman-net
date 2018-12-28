@@ -40,4 +40,38 @@
       font-size: 2rem;
     }
   }
+
+  .notFoundPage {
+    background-size: cover;
+    background-image: url('../images/404-sm.jpg');
+    background-position: center bottom;
+    height: 100%;
+    left: 0;
+    padding-top: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  
+    @media (min-width: $bp-md) {
+      background-image: url('../images/404.jpg');
+      background-position: center;
+      padding-top: $content-vertical-padding;
+    }
+  
+    &:before {
+      background: $color-secondary;
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.5;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+
+    body {
+      background: transparent;
+    }
+  }
 }
