@@ -1,42 +1,36 @@
 import React from 'react'
 
-import { StyledSocialIcons } from './socialIcons.styles'
-import {
-  IconTwitter,
-  IconGithub,
-  IconLinkedIn,
-  IconMeetup,
-  IconEmail,
-} from '../../../assets/styles/icons'
+import styles from './socialIcons.module.scss'
+import { Icon } from '../../Content'
 
 const SocialIcons = () => (
-  <StyledSocialIcons>
-    <li>
-      <a href="/">
-        <IconTwitter title="Twitter" />
+  <ul className={styles.socialIconsList}>
+    <li className={styles.socialIconItem}>
+      <a className={styles.socialIconLink} href="/">
+        <Icon char="t" title="Twitter" />
       </a>
     </li>
-    <li>
-      <a href="/">
-        <IconGithub title="Github" />
+    <li className={styles.socialIconItem}>
+      <a className={styles.socialIconLink} href="/">
+        <Icon char="g" title="Github" />
       </a>
     </li>
-    <li>
-      <a href="/">
-        <IconLinkedIn title="LinkedIn" />
+    <li className={styles.socialIconItem}>
+      <a className={styles.socialIconLink} href="/">
+        <Icon char="l" title="LinkedIn" />
       </a>
     </li>
-    <li>
-      <a href="/">
-        <IconMeetup title="Denver Code Club" />
+    <li className={styles.socialIconItem}>
+      <a className={styles.socialIconLink} href="/">
+        <Icon char="k" title="Denver Code Club" />
       </a>
     </li>
-    <li>
-      <a href="/">
-        <IconEmail title="Email" />
+    <li className={styles.socialIconItem}>
+      <a className={styles.socialIconLink} href="/">
+        <Icon char="e" title="Email" />
       </a>
     </li>
-  </StyledSocialIcons>
+  </ul>
 )
 
 export default SocialIcons

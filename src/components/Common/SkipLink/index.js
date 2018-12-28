@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { StyledSkipLink } from './skipLink.styles'
+import styles from './skipLink.module.scss'
 
 const SkipLink = ({ children }) => (
-  <StyledSkipLink class="skip-link" href="#content">
+  <a className={styles.skipLink} href="#content">
     Skip to content
-  </StyledSkipLink>
+  </a>
 )
 
 export default SkipLink

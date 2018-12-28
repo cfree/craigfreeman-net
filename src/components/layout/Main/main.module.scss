@@ -1,0 +1,8 @@
+@import '../../../assets/styles/variables.module.scss';
+
+.main {
+  max-width: $max-width;
+  margin: 0 auto;
+  box-shadow: $box-shadow;
+  padding: 20px;
+}

@@ -1,12 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import { ThemeProvider } from 'styled-components'
 
-import GlobalStyles from '../../../assets/styles/global'
-import theme from '../../../assets/styles/theme'
+import styles from './page.module.scss'
 import { Header, Footer } from '../'
-import { StyledPage } from './page.styles'
 
 const Page = ({ children }) => (
   <StaticQuery
@@ -20,18 +17,13 @@ const Page = ({ children }) => (
       }
     `}
     render={data => (
-      <ThemeProvider theme={theme}>
-        <>
-          <GlobalStyles />
-          <StyledPage>
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <div id="content">
-              {children}
-            </div>
-            <Footer />
-          </StyledPage>
-        </>
-      </ThemeProvider>
+      <div className={styles.page}>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div id="content">
+          {children}
+        </div>
+        <Footer />
+      </div>
     )}
   />
 )

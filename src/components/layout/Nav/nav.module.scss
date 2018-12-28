@@ -1,13 +1,13 @@
-import styled from 'styled-components'
+@import '../../../assets/styles/variables.module.scss';
 
-export const StyledNav = styled.nav`
+.nav {
   text-align: right;
   display: flex;
   flex-direction: column;
   height: 100%;
-`
+}
 
-export const StyledNavList = styled.ul`
+.navList {
   list-style: none;
   margin: auto 0 0;
   padding: 0;
@@ -16,15 +16,14 @@ export const StyledNavList = styled.ul`
     display: inline-block;
     margin: 0 0 0 20px;
 
-    &:hover {
-      a {
-        &:before {
-          max-width: 4px;
+    &:hover a,
+    .active {
+      &:before {
+        max-width: 4px;
 
-          @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-            left: 0;
-            max-width: 100%;
-          }
+        @media (min-width: $bp-md) {
+          left: 0;
+          max-width: 100%;
         }
       }
     }
@@ -33,21 +32,21 @@ export const StyledNavList = styled.ul`
   a {
     font-size: 16px;
     font-size: 1.6rem;
-    padding: ${({ theme }) => theme.typography.space}px 0;
-    color: ${({ theme }) => theme.colors.white};
+    padding: $space 0;
+    color: $color-light;
     display: block;
     letter-spacing: 1px;
     position: relative;
-    font-family: ${({ theme }) => theme.typography.fonts.primary};
+    font-family: $font-primary;
     text-transform: uppercase;
 
-    @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    @media (min-width: $bp-md) {
       font-size: 20px;
       font-size: 2rem;
     }
 
     &:before {
-      background: ${({ theme }) => theme.colors.secondary};
+      background: $color-secondary;
       content: '';
       left: 0;
       height: 100%;
@@ -57,7 +56,7 @@ export const StyledNavList = styled.ul`
       transition: all 0.2s;
       width: 100%;
 
-      @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      @media (min-width: $bp-md) {
         bottom: 0;
         left: 50%;
         height: 8px;
@@ -69,8 +68,8 @@ export const StyledNavList = styled.ul`
       text-decoration: none;				
     }
   }
-`
+}
 
-export const StyledNavSocialIcons = styled.div`
+.navSocialIcons {
   margin: 20px 0 -10px;
-`
+}

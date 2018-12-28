@@ -1,0 +1,27 @@
+@import '../../../assets/styles/variables.module.scss';
+
+.header {
+  background: $color-gray-dark;
+}
+
+.headerLogo {
+  margin: 15px 0;
+  padding: 0;
+
+  img {
+    max-height: 80px;
+    transition: max-height 0.3s;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.headerContent {
+  display: flex;
+  align-items: stretch;
+}
+
+.headerNav {
+  margin-left: auto;
+}

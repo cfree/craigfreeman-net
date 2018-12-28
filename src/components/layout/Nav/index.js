@@ -1,21 +1,38 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
-import { StyledNav, StyledNavSocialIcons, StyledNavList } from './nav.styles'
+import styles from './nav.module.scss'
 import { SocialIcons } from '../../Common'
 
 const Nav = () => (
-  <StyledNav>
-    <StyledNavSocialIcons>
+  <nav className={styles.nav}>
+    <div className={styles.navSocialIcons}>
       <SocialIcons />
-    </StyledNavSocialIcons>
+    </div>
 
-    <StyledNavList>
-      <li><a href="/">Home</a></li>
-      <li><a href="/">Talks</a></li>
-      <li><a href="/">Kitchen</a></li>
-      <li><a href="/">About</a></li>
-    </StyledNavList>
-  </StyledNav>
+    <ul className={styles.navList}>
+      <li>
+        <Link to="/" activeClassName="active">
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link to="/talks" activeClassName="active">
+          Talks
+        </Link>
+      </li>
+      <li>
+        <Link to="/resume" activeClassName="active">
+          Kitchen
+        </Link>
+      </li>
+      <li>
+        <Link to="/about" activeClassName="active">
+          About
+        </Link>
+      </li>
+    </ul>
+  </nav>
 )
 
 export default Nav

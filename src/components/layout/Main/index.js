@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { StyledMain } from './main.styles'
+import styles from './main.module.scss'
 
 const Main = ({ children }) => (
-  <StyledMain>
+  <main className={styles.main}>
     {children}
-  </StyledMain>
+  </main>
 )
 
 export default Main

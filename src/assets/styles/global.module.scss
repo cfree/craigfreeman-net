@@ -1,0 +1,43 @@
+@import './variables.module.scss';
+
+:global {
+  html {
+    box-sizing: border-box;
+    font-family: $font-serif;
+    /* Root for rems
+      62.5% takes 16px (browser default size for medium text) down to 10px
+      ref: http://clagnut.com/blog/348/ */
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+    background: $color-gray-dark;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: $color-primary;
+  }
+
+  /* Typography */
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    color: $color-gray-dark;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.2;
+
+    @media (min-width: $bp-md) {
+      font-size: 20px;
+      font-size: 2rem;
+    }
+  }
+}

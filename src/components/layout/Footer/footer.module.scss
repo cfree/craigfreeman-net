@@ -1,0 +1,26 @@
+@import '../../../assets/styles/variables.module.scss';
+
+.footer {
+  background: $color-gray-light;
+  text-align: center;
+  color: darken($color-gray-light, 25%);
+	font-family: $font-primary;
+	font-size: 1.4rem;
+	letter-spacing: 1.25px;
+	padding: ($space * 2) 0;
+	text-transform: uppercase;
+
+	a {
+		color: lighten($color-gray-dark, 30%);
+	}
+
+	p {
+		margin: 0;
+  }
+  
+  span:before {
+    bottom: -9px;
+    font-size: 30px;
+    position: relative;
+	}
+}

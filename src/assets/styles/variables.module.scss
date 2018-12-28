@@ -1,0 +1,27 @@
+// Colors
+$color-light: #FFF;
+$color-dark: #000;
+$color-gray-light: #F1F1F1;
+$color-gray-dark: #3D4C53;
+$color-primary: #4D9ABE;
+$color-secondary: #E64A45; // links, etc.
+
+// Breakpoints
+$bp-sm: 480px;
+$bp-md: 720px;
+$bp-lg: 960px;
+$bp-xl: 1800px;
+$max-width: 1200px;
+
+// Fonts
+$font-icons: 'cf-net'; // Fontastic.me
+$font-default: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; // Typekit
+$font-primary: effra, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; // TypeKit
+$font-serif: 'ff-tisa-web-pro', Georgia, 'Times New Roman', serif; // TypeKit
+
+// Typography
+$space: 20px;
+$content-vertical-padding: 110px;
+
+// Misc
+$box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.09);

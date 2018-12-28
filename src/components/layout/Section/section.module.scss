@@ -1,0 +1,15 @@
+@import '../../../assets/styles/variables.module.scss';
+
+.section {
+  padding: 40px 0;
+  
+  @media (min-width: $bp-md) {
+    padding: 80px 0;
+  }
+}
+
+.dark {
+  background-color: $color-gray-dark;
+  background-image: url('../../../assets/images/bg-grid-dark.svg');
+  background-position: center;
+}
