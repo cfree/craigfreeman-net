@@ -1,0 +1,29 @@
+@import '../../../assets/styles/variables.module.scss';
+
+.cards {
+  background: $color-gray-light;
+  padding: 2em 0 1.5em;
+
+  span {
+    color: $color-icon;
+    position: relative;
+    top: 10%;
+  }
+}
+
+.cardArchitecture span {
+  top: 22%;
+  font-size: 15rem;
+}
+
+.cardDesign span {
+  font-size: 25rem;
+}
+
+.cardFrontend span {
+  font-size: 22rem;
+}
+
+.cardBackend span {
+  font-size: 18rem;
+}

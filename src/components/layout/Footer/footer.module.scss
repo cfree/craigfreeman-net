@@ -24,3 +24,11 @@
     position: relative;
 	}
 }
+
+.links {
+  margin: 0 0 20px 20px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+}

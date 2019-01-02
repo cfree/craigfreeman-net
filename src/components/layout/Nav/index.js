@@ -23,7 +23,7 @@ const Nav = () => (
       </li>
       <li>
         <Link to="/resume" activeClassName="active">
-          Kitchen
+          Resume
         </Link>
       </li>
       <li>

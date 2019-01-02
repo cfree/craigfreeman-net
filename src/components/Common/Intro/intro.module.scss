@@ -1,0 +1,11 @@
+@import '../../../assets/styles/variables.module.scss';
+
+.intro {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin: 1.5em 0;
+
+	@media (min-width: $bp-md) {
+    font-size: 2.4rem;    
+	}
+}

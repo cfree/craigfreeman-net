@@ -11,3 +11,8 @@
     padding: 0 ($space * 0.75);
   }
 }
+
+.containerSmall {
+  @extend .container;
+  max-width: $content;
+}

@@ -1,0 +1,39 @@
+@import '../../../assets/styles/variables.module.scss';
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  h2 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin: 16px 0;
+    clear: both;
+  }
+
+  p {
+    line-height: 1.6;
+    margin: 0 0 1.5em;
+  }
+}
+
+.icon {
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  &Right {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+}
+
+.content {
+  grid-column-start: 2;
+  grid-column-end: 4;
+
+  &Right {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}

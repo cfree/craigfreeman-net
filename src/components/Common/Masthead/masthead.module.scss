@@ -1,0 +1,118 @@
+@import '../../../assets/styles/variables.module.scss';
+
+.masthead {
+	background-size: cover;
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+
+  @media (min-width: $bp-md) {
+		height: 400px;
+	}
+
+	@media (min-width: $bp-xl) {
+		height: 600px;
+	}
+
+	&:before {
+		background: $color-primary;
+		content: '';
+		height: 100%;
+		opacity: 0.5;
+		position: absolute;
+		width: 100%;
+	}
+
+	.container {
+		height: 100%;
+		position: relative;
+	}
+}
+
+.title {
+	color: $color-light;
+	font-family: $font-primary;
+	font-size: 3rem;
+	line-height: 1.2;
+	margin: 0 auto;
+	padding: 1em 0;
+	position: relative;
+	text-align: center;
+	text-shadow: 3px 3px $color-gray-dark;
+	text-transform: uppercase;
+	
+	@media (min-width: $bp-sm) {
+		font-size: 4rem;
+	}
+
+	@media (min-width: $bp-md) {
+		font-size: 8rem;
+		padding: 2em 0 0;
+		width: 90%;
+	}
+
+	@media (min-width: $bp-lg) {
+		font-size: 8rem;
+		width: 70%;
+	}
+
+	@media (min-width: $bp-xl) {
+		padding-top: 3em;
+	}
+
+	&.hasSubtitle {
+		padding-bottom: 0;
+
+		@media (min-width: $bp-md) {
+			padding-top: 1.65em;
+		}
+
+		@media (min-width: $bp-xl) {
+			padding-top: 2.65em;
+		}
+	}
+}
+
+.subtitle {
+	color: $color-light;
+	font-family: $font-primary;
+	font-size: 2rem;
+	line-height: 1;
+	margin: 0 auto;
+	padding: 0 0 1.8em;
+	position: relative;
+	text-align: center;
+	text-shadow: 2px 2px $color-gray-dark;
+	text-transform: uppercase;
+
+	@media (min-width: $bp-md) {
+		font-size: 4rem;
+		padding: 0.2em 0 0;
+		width: 80%;
+	}
+}
+
+.default {
+	background-image: url('../../../assets/images/heroes/build.jpg');
+}
+
+.mountains {
+	background-image: url('../../../assets/images/heroes/mountains.jpg');
+}
+
+.code {
+	background-image: url('../../../assets/images/heroes/code.jpg');
+}
+
+.notes {
+	background-image: url('../../../assets/images/heroes/notes.jpg');
+}
+
+.spyglass {
+	background-image: url('../../../assets/images/heroes/spyglass.jpg');
+}
+
+.typewriter {
+	background-image: url('../../../assets/images/heroes/typewriter.jpg');
+}

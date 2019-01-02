@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from './socialIcons.module.scss'
-import { Icon } from '../../Content'
+import { Icon } from '../../Common'
 
 const SocialIcons = () => (
   <ul className={styles.socialIconsList}>
@@ -18,11 +18,6 @@ const SocialIcons = () => (
     <li className={styles.socialIconItem}>
       <a className={styles.socialIconLink} href="/">
         <Icon char="l" title="LinkedIn" />
-      </a>
-    </li>
-    <li className={styles.socialIconItem}>
-      <a className={styles.socialIconLink} href="/">
-        <Icon char="k" title="Denver Code Club" />
       </a>
     </li>
     <li className={styles.socialIconItem}>
