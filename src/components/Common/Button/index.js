@@ -13,6 +13,7 @@ const Button =({
   href = '',
   to = '',
   handleClick = () => {},
+  sameWindow = false,
   children,
 }) => {
   const isPrimary = primary && !secondary;
@@ -35,7 +36,7 @@ const Button =({
   if (href) {
     return <a
       href={href}
-      target="_blank"
+      target={sameWindow ? '_blank' : '_self'}
       className={classes}
       rel="noopener noreferrer"
     >

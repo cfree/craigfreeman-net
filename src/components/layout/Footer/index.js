@@ -5,27 +5,15 @@ import { Section } from '../'
 import { Icon, Button } from '../../Common'
 
 class Footer extends Component {
-  state = {
-    modalOpen: false,
-  }
-
-  handleEmailClick = () => {
-    console.log('Open modal');
-    this.setState({ modalOpen: true })
-  }
-
-  handleModalClose = () => {
-    this.setState({ modalOpen: false })
-  }
-
   render() {
     return <>
       <Section dark={true}>
         <Button
-          handleClick={this.handleEmailClick}
+          href="mailto:craigfreeman@gmail.com"
           secondary={true}
           ghostOnHover={true}
           large={true}
+          sameWindow={true}
         >
           craigfreeman <Icon char="a" title="at" /> gmail
         </Button>
